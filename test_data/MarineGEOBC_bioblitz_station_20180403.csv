@@ -1,0 +1,251 @@
+eventID,locality,decimalLatitude,decimalLongitude,coordinateUncertaintyInMeters,geoReferenceProtocol,year,month,day,maximumDepthInMeters,minimumDepthInMeters,recordedBy,samplingProtocol,HabitatPhysiographicSetting,HabitatGeoform,HabitatSubstrate,HabitatBiotic,eventTime,verbatimCoordinates,eventMedia,eventRemarks
+IHAK01,"North Beach, West end, boulder on sand, low intertidal",51.663404,-128.143689,,,2017,7,22,,,Paulay Gustav,Hand collecting,Ocean Coast,Boulder Field,Boulder,Unclassified,,,,
+IHAK02,"North Beach, East end, boulder field, low intertidal",51.664723,-128.135032,,,2017,7,22,,,Paulay Gustav,Hand collecting,Ocean Coast,Boulder Field,Boulder,Unclassified,,,,
+IHAK03,"North Beach, East Point, rocky bench exposed, intertidal (barnacles, mussels, algae)",51.664723,-128.1351,,,2017,7,22,,,Radashevsky Vasily,Hand collecting,Ocean Coast,Rock Outcrop,Bedrock,Unclassified,,,,#NAME?
+IHAK04,"Martin's, Maey Channel (Hecate island side), soft sediment ",51.66554,-128.07887,,,2017,7,22,,,Radashevsky Vasily,Hand collecting,Bay,Beach ,Mud,Unclassified,,,,same site as SHAK01
+SHAK01,"Martin's, Maey Channel (Hecate island side), soft sediment ",51.66554,-128.07887,,GPS,2017,7,22,,,Dudas Sarah,Hand collecting,Bay,Beach ,Sand,Unclassified,,,,
+RHAK01,"North Beach, East Point, rocky bench exposed, intertidal (barnacles, mussels, algae)",51.66658,-128.1351,,,2017,7,22,,,Gehman Alyssa,Hand collecting,Ocean Coast,Rock Outcrop,Bedrock,Unclassified,,,Y,
+MHAK07,"West Beach, boulder field",51.64728019,-128.1466507,,,2017,7,22,,,Okamoto Noriko,"Hand collecting, MgCl extraction",Ocean Coast,Boulder Field,Algal Substrate,Macroalgae,,,,
+AHAK01a,North Beach West,51.6635,-128.14415,,,2017,7,22,,,Lindstrom Sandra,Hand collecting,Ocean Coast,Rock Outcrop,Rock Substrate,Unclassified,,,,
+AHAK01b,North Beach West,51.6635,-128.14415,,,2017,7,24,,,Lindstrom Sandra,Hand collecting,Ocean Coast,Rock Outcrop,Rock Substrate,Unclassified,,,,
+AHAK02a,North Beach East,51.6643,-128.13516,,,2017,7,22,,,Lindstrom Sandra,Hand collecting,Ocean Coast,Rock Outcrop,Rock Substrate,Unclassified,,,,
+AHAK02b,North Beach East,51.6643,-128.13516,,,2017,7,24,,,Lindstrom Sandra,Hand collecting,Ocean Coast,Rock Outcrop,Rock Substrate,Unclassified,,,,
+AHAK03,Little Wolf Beach ,51.6655,-128.13,,,2017,7,22,,,Lindstrom Sandra,Hand collecting,Ocean Coast,Boulder Field,Rock Substrate,Unclassified,,,,
+FHAK01,"SNI1, silt/cobble, subtidal, eelgrass",51.83842,-128.05959,,,2017,7,23,3,,Millard-Martin Ben,Seine,Bay,Beach ,Mud,Seagrass Bed,,,,
+FHAK02,"SNI2, cobble/gravel, subtidal, large bladed algae",51.81764,-128.03004,,,2017,7,23,3,,Millard-Martin Ben,Seine,Bay,Beach ,Cobble,Macroalgae,,,,
+ZHAK01,"North Beach, Crazy Town, mussel cove",51.66692937,-128.1341392,,,2017,7,23,,,Gehman Alyssa | Okamoto Noriko,Hand collecting,Ocean Coast,Rock Outcrop,Rock Substrate,Mussel Reef,,,Y,
+IHAK05,"Crazy Town, low intertidal crevice",51.667057,-128.13392,,,2017,7,23,,,Paulay Gustav | Duffy Emmett,Hand collecting,Ocean Coast,Scarp/Wall,Rock Substrate,Unclassified,,,Y,
+AHAK04,"North Beach pen., exposed  bedrock",51.66692937,-128.1341392,,,2017,7,23,,,Lindstrom Sandra,Hand collecting,Ocean Coast,Rock Outcrop,Bedrock,Unclassified,,,,
+AHAK04b,"North Beach pen., exposed  bedrock",51.66692937,-128.1341392,,,2017,7,24,,,Lindstrom Sandra,Hand collecting,Ocean Coast,Rock Outcrop,Bedrock,Unclassified,,,,"same location as AHAK04(a), but different day; no specimens with this suffix"
+RHAK01,North Beach peninsula (aka Livavera Pt),51.66658,-128.1351,,,2017,7,23,,,Gehman Alyssa,Hand collecting,Ocean Coast,Rock Outcrop,Bedrock,Unclassified,,,,
+MHAK01,"North Beach west end, lower intertidal boulders",51.66510592,-128.1476888,,iPad (Collector),2017,7,23,,,Okamoto Noriko,Hand collecting,Ocean Coast,Boulder Field,Boulder,Attached Tunicates,,,,
+MHAK02,"North Beach west end, lower intertidal kelp beds",51.66551886,-128.1461835,,iPad (Collector),2017,7,23,,,Okamoto Noriko,Hand collecting,Ocean Coast,Rock Outcrop,Rock Substrate,Unclassified,,,,
+MHAK03,"North Beach west end, lower intertidal at waterline, near kelp beds",51.66438002,-128.148623,,iPad (Collector),2017,7,23,,,Okamoto Noriko,"Hand collecting, MgCl extraction",Ocean Coast,Beach ,Sand,Unclassified,,,,
+MHAK04,"North Beach west end, lower intertidal at waterline, sediment",51.66449291,-128.1352059,,iPad (Collector),2017,7,23,,,Okamoto Noriko,"Hand collecting, MgCl extraction",Ocean Coast,Rock Outcrop,Sand,Unclassified,,,,
+MHAK05,"North Beach west end, lower intertidal tidepools, sediment",51.66522924,-128.1463413,,iPad (Collector),2017,7,23,,,Okamoto Noriko,"Hand collecting, MgCl extraction",Ocean Coast,Tidepool,Sand,Unclassified,,,,
+MHAK06,"North Beach west end, lower intertidal kelp bed, sediment",51.66552908,-128.1461889,,iPad (Collector),2017,7,23,,,Okamoto Noriko,"Hand collecting, MgCl extraction",Ocean Coast,Beach ,Sand,Unclassified,,,,
+SHAK02,"Piles Beach/Telis Tower, cobble/mud, extra high 4.0 - 3.0 m",51.64302,-128.08699,,Handheld GPS,2017,7,23,,,Dudas Sarah,Hand collecting,Bay,Beach ,Cobble,Unclassified,,,,
+SHAK03,"Piles Beach/Telis Tower, mud,  high zone 3.0 - 2.2 m",51.64291,-128.08701,,Handheld GPS,2017,7,23,,,Dudas Sarah,Hand collecting,Bay,Beach ,Mud,Unclassified,,,,
+SHAK04,"Piles Beach/Telis Tower, mud/sand, mid zone 2.2 - 1.5 m",51.64313,-128.08563,,Handheld GPS,2017,7,23,,,Dudas Sarah,Hand collecting,Bay,Flat,Mud,Unclassified,,,,
+SHAK05,"Piles Beach/Telis Tower, sand, low zone 1.5 - 0.8 m",51.64513,-128.08629,,Handheld GPS,2017,7,23,,,Dudas Sarah,Hand collecting,Bay,Flat,Sand,Unclassified,,,,
+SHAK06,"Piles Beach/Telis Tower, sand/silt, extra low 0.8 - 0.2 m",51.64548,-128.08638,,Handheld GPS,2017,7,23,,,Dudas Sarah,Hand collecting,Bay,Flat,Silt,Unclassified,,,,
+IHAK06,"West Beach, south side, mid-low intertidal, sandy beach",51.65423,-128.14142,,,2017,7,24,,,Paulay Gustav | Duffy Emmett | Whalen Matt | Gehman Alyssa,Hand collecting,Ocean Coast,Beach ,Sand,Unclassified,,,,
+IHAK07,"West Beach, south side, boulder field, low intertidal, Macrocystis and Phyllospadix",51.65185,-128.14278,,,2017,7,24,,,Paulay Gustav | Duffy Emmett | Whalen Matt | Gehman Alyssa,Hand collecting,Ocean Coast,Boulder Field,Boulder,Macroalgae,,,,
+ZHAK02,"West Beach wall, South side, mussel cove, horizontal bed ",51.652471,-128.14098,,,2017,7,24,,,Gehman Alyssa,Hand collecting,Ocean Coast,Scarp/Wall,Bedrock,Mussel Reef,,,,
+ZHAK03,"West Beach wall, South side, mussel cove, vertical bed ",51.652477,-128.14114,,,2017,7,24,,,Gehman Alyssa,Hand collecting,Ocean Coast,Scarp/Wall,Bedrock,Mussel Reef,,,,
+FHAK03,"KIS2: Fringing elgrass adj. Macrocystis. Sand bottom, some benthic algae",51.81098,-128.22937,,,2017,7,24,3,,FABS,Seine,Bay,Beach ,Shell Hash,Seagrass Bed,,,,Kelp / seagrass
+FHAK04,"KIS1: Fringing elgrass adj. Macrocystis. Sand bottom, some benthic algae",51.83706,-128.23918,,,2017,7,24,3,,FABS,Seine,Bay,Beach ,Cobble,Benthic Macroalgae,,,,understory kelp
+SHAK07,"Pruth Bay, Rocky shores, extra high intertidal 3-4 m",51.64386,-128.11908,,,2017,7,24,,,Dudas Sarah | soft sediment team,Hand collecting,Bay,Boulder Field,Rock Substrate,Unclassified,,,,
+SHAK08,"Pruth Bay, Rock cobble sand, high intertidal 3.0-2.2 m",51.64394,-128.11911,,,2017,7,24,,,Dudas Sarah | soft sediment team,Hand collecting,Bay,Beach ,Sand,Unclassified,,,,
+SHAK09,"Pruth Bay, sand mud, mid intertidal 2.2-1.5 m",51.64398,-128.11928,,,2017,7,24,,,Dudas Sarah | soft sediment team,Hand collecting,Bay,Beach ,Sand,Unclassified,,,,
+SHAK10,"Pruth Bay, mud, low intertidal 1.5-0.8 m",51.64401,-128.11955,,,2017,7,24,,,Dudas Sarah | soft sediment team,Hand collecting,Bay,Beach ,Mud,Unclassified,,,,
+SHAK11,"Pruth Bay, seagrass, extra low intertidal 0.8-0.4 m",51.64404,-128.1198,,,2017,7,24,,,Dudas Sarah | soft sediment team,Hand collecting,Bay,Beach ,Mud,Seagrass Bed,,,,
+SHAK12,"Pruth Bay, low seagrass bed, cores #1-6",51.64404,-128.1198,,,2017,7,24,,,Hessing-Lewis Margot,Core,Bay,Beach ,Mud,Seagrass Bed,,,,
+SHAK13,"Pruth Bay, soft sediment/mud, cores #1-6 for SHAK 08-11",51.64404,-128.1198,,,2017,7,24,,,Hessing-Lewis Margot,Core,Bay,Beach ,Mud,Unclassified,,,,
+MHAK08,"North Beach, East end, lower intertidal, meiofauna from assorted seaweeds",51.66446211,-128.1351038,,,2017,7,25,,,Okamoto Noriko,"Hand collecting, MgCl extraction",Ocean Coast,Beach ,Algal Substrate,Macroalgae,,,,
+MHAK09,"North Beach, West end, lower intertidal, under rock",51.66561965,-128.1462174,,,2017,7,25,,,Okamoto Noriko,Hand collecting,Ocean Coast,Beach ,Sand,Unclassified,,,,
+MHAK10,"West Beach, N side in front of the islet. Mid-high intertidal, 1 cm top sediment",51.65769916,-128.1446917,,,2017,7,25,,,Okamoto Noriko,Hand collecting,Ocean Coast,Beach ,Sand,Unclassified,,,,
+MHAK11,Wave exposed rocks between 5th and 7th Beaches,51.6389,-128.15723,,,2017,7,25,,,Okamoto Noriko,Hand collecting,Ocean Coast,Beach ,Bedrock,Unclassified,,,,
+MHAK12,"Sixth Beach, low intertidal, coarse sediment between boulder",51.6389033,-128.1572264,,iPad (Collector),2017,7,25,,,Okamoto Noriko,Hand collecting,Ocean Coast,Beach ,Rock Substrate,Unclassified,,,,
+MHAK13,"Sixth Beach, low intertidal, coarse sediment between boulder",51.63884303,-128.156523,,iPad (Collector),2017,7,25,,,Irwin Nick,Hand collecting,Ocean Coast,Tidepool,Bedrock,Coralline algae,,,,
+IHAK08,"Fifth Beach, low intertidal, sand",51.64282,-128.15255,,,2017,7,25,,,Paulay Gustav,Hand collecting,Ocean Coast,Beach ,Sand,Unclassified,,,,
+IHAK09,"Fifth Beach, Shatner Point, mid-low intertidal, rock benches, walls, tidepools (with mussels, barnacles, and algae)",51.63873,-128.1574,,,2017,7,25,,,Paulay Gustav | Duffy Emmett | Whalen Matt | Gehman Alyssa,Hand collecting,Ocean Coast,Rock Outcrop,Bedrock,Unclassified,,,,
+IHAK09A,"Fifth Beach, Shatner Point, mid-low intertidal, rock benches, walls, bulk sample from barnacles",51.63873,-128.1574,,,2017,7,25,,,Paulay Gustav | Duffy Emmett | Whalen Matt | Gehman Alyssa,Hand collecting,Ocean Coast,Rock Outcrop,Bedrock,Barnacles,,,,
+IHAK09B,"Fifth Beach, Shatner Point, mid-low intertidal, rock benches, walls, bulk sample from `",51.63873,-128.1574,,,2017,7,25,,,Paulay Gustav | Duffy Emmett | Whalen Matt | Gehman Alyssa,Hand collecting,Ocean Coast,Rock Outcrop,Bedrock,Benthic Macroalgae,,,,Kelp
+IHAK09C,"Fifth Beach, Shatner Point, deep in low intertidal crevice hanging from roof, bulk sample from bryozoan (BHAK543)",51.63873,-128.1574,,,2017,7,25,,,Paulay Gustav | Duffy Emmett | Whalen Matt | Gehman Alyssa,Hand collecting,Ocean Coast,Rock Outcrop,Bedrock,Unclassified,,,,
+IHAK10,"Fifth Beach, Cove near iButton, boulders with Phyllospadix and Fucus",51.63971,-128.15616,,,2017,7,25,,,Paulay Gustav | Duffy Emmett | Whalen Matt | Okamoto Noriko,Hand collecting,Ocean Coast,Boulder Field,Boulder,Unclassified,,,,
+IHAK11,"Fifth Beach, boulders East of monitoring site, mid-high intertidal",51.64179,-128.15477,,,2017,7,25,,,Paulay Gustav | Duffy Emmett | Whalen Matt,Hand collecting,Ocean Coast,Boulder Field,Boulder,Unclassified,,,,Sampled by flipping boulders on sand. Boulders covered with filamentous green algae (Ulva)
+SHAK14,"West Beach, north, Sand, 2.0-1.3 m",51.6542525,-128.1399222,,,2017,7,25,,,Dudas Sarah | soft sediment team,Hand collecting,Ocean Coast,Beach ,Sand,Unclassified,,,,
+SHAK15,"HCGR Beach, rocky intertidal, extra high 4.0-3.0 m",51.64252,-128.07816,,,2017,7,25,,,Dudas Sarah | soft sediment team,Hand collecting,Bay,Rock Outcrop,Bedrock,Unclassified,,,,
+SHAK16,"HCGR Beach, rocky intertidal, high  3.0-2.2 m, cobble",51.64258,-128.07816,,,2017,7,25,,,Dudas Sarah | soft sediment team,Hand collecting,Bay,Rock Outcrop,Cobble,Unclassified,,,,
+SHAK17,"HCGR Beach, mid intertidal 2.2-1.5 m, cobble/mud/sand",51.64264,-128.07814,,,2017,7,25,,,Dudas Sarah | soft sediment team,Hand collecting,Bay,Beach ,Sand,Unclassified,,,,
+SHAK18,"HCGR Beach, low intertidal 1.5-0.8 m, mud/sand",51.64299,-128.07817,,,2017,7,25,,,Dudas Sarah | soft sediment team,Hand collecting,Bay,Beach ,Mud,Unclassified,,,,
+SHAK19,"HCGR Beach, extra low intertidal 0.8-0.4 m, mud/sand/seagrass",51.64324,-128.07814,,,2017,7,25,,,Dudas Sarah | soft sediment team,Hand collecting,Bay,Beach ,Mud,Unclassified,,,,
+FHAK05,"RIS3: Fury Island, anchorage, subtidal, mud/sand",51.48631,-127.76165,,,2017,7,25,3,,FABS,Seine,Fjord,Beach ,Sand,Unclassified,,,,
+FHAK06,RIS1: Rivers Inlet,51.45568,-127.69102,,,2017,7,25,3,,FABS,Seine,Fjord,Beach ,Sand,Seagrass Bed,,,,"Fringing Seagrass, Punctaria"
+ZHAK04,"Point Shatner, mussel cove, horizontal mussel bed",51.63869,-128.15751,,,2017,7,25,,,Gehman Alyssa,Hand collecting,Ocean Coast,Rock Outcrop,Bedrock,Mussel Reef,,,,
+RHAK02,"Goose Island group, Duck Island, low rocky intertidal",51.9048,-128.48095,,,2017,7,25,,,Hall Kyle,Hand collecting,Ocean Coast,Rock Outcrop,Bedrock,Mussel Reef,,,,Barnacles/mussels
+IHAK08,"Fifth Beach, sand, low intertidal",51.64282,-128.15255,,,2017,7,25,,,Paulay Gustav,Hand collecting,Ocean Coast,Beach ,Sand,Unclassified,,,,
+IHAK09,"Shatner Point, Fifth Beach, low intertidal, rock benches, mussel/barnacle/alge walls/tidepools",51.63873,-128.1574,,,2017,7,25,,,Paulay Gustav | Okamoto Noriko,Hand collecting,Ocean Coast,Rock Outcrop,Rock Substrate,Mussel Reef,,,,Barnacles/mussels
+IHAK10,"Fifth Beach, Cove near iButton, boulders with Phyllospadix and Fucus",51.63971,-128.15616,,,2017,7,25,,,Paulay Gustav,Hand collecting,Ocean Coast,Boulder Field,Boulder,Benthic Macroalgae,,,,Fucus/Phyllospadix
+IHAK11,"Fifth Beach, boulders East of monitoring site, mid-high intertidal",51.64179,-128.15477,,,2017,7,25,,,Paulay Gustav,Hand collecting,Ocean Coast,Boulder Field,Boulder,Turf Algal Bed,,,,filimentous green alge
+SHAK20,Goose Grass Bay,51.660039,-128.117478,,,2017,7,26,,,Dudas Sarah,Hand collecting,Bay,Inlet,Silt,Seagrass Bed,,,,
+SHAK21,Tippy Rock Bay (EJTA-4),51.662974,-128.097938,,,2017,7,26,,,Dudas Sarah,Hand collecting,Bay,Inlet,Sand,Unclassified,,,,
+SHAK22,Goose Grass Bay,51.663139,-128.117427,,,2017,7,26,,,Dudas Sarah,Hand collecting,Bay,Inlet,Boulder,Unclassified,,,,
+SHAK23,Wolf Beach,51.668049,-128.118786,,,2017,7,26,,,Dudas Sarah,Hand collecting,Bay,Beach ,Sand,Unclassified,,,,
+MHAK14,Tippy Rock Bay (EJTA-4),51.66635,-128.0971,,,2017,7,26,,,Okamoto Noriko,Hand collecting,Bay,Inlet,Silt,Unclassified,,,,
+IHAK12,"Fifth Beach, boulders East of monitoring site, mid-high intertidal",51.64179,-128.15477,,,2017,7,26,,,Paulay Gustav,Hand collecting,Ocean Coast,Boulder Field,Boulder,Turf Algal Bed,,,,filimentous green alge
+IHAK13,Pruth Lagoon,51.65697288,-128.1307444,,,2017,7,27,,,Paulay Gustav,Hand collecting,Lagoon,Inlet,Silt,Emergent Tidal Marsh,,,,sea asparagus / Salicornia
+OHAK01,Mouth of Kwakshua,51.65519,-127.95982,,,2017,7,26,6,0,Pontier Ondine | Prinzing Tanya,"Hand collecting, SCUBA",Fjord,Rock Outcrop,Bedrock,Benthic Macroalgae,,,,
+RHAK04,"Seventh Beach, south wall mussel bed, mid intertidal",51.63797,-128.14735,,,2017,7,27,,,Hall Kyle,Hand collecting,Ocean Coast,Scarp/Wall,Bedrock,Mussel Reef,,,,
+RHAK05,"Seventh Beach, South wall, low intertidal",51.63796573,-128.1473491,,iPad (Collector),2017,7,26,,,Hall Kyle,Hand collecting,Ocean Coast,Scarp/Wall,Bedrock,Unclassified,,,,
+RHAK06,"Seventh Beach, North wall, low intertidal tide pool",51.63940791,-128.1523479,,iPad (Collector),2017,7,26,,,Hall Kyle,Hand collecting,Ocean Coast,Tidepool,Bedrock,Unclassified,,,,
+RHAK07,"Fifth Beach, Rocky Intertidal site, mid intertidal tidepool",51.64003842,-128.1573066,,iPad (Collector),2017,7,26,,,Hall Kyle,Hand collecting,Ocean Coast,Tidepool,Bedrock,Unclassified,,,,
+SHAK25,"Sixith Beach, low intertidal, rocky",51.639371,-128.154658,,GPS,2017,7,26,,,Dudas Sarah,Hand collecting,Ocean Coast,Beach ,Rock Substrate,Unclassified,,,,
+SHAK26,"Second Beach, mid intertidal mussel bed",51.648039,-128.146428,,GPS,2017,7,26,,,Dudas Sarah,Hand collecting,Ocean Coast,Beach ,Rock Substrate,Mussel Reef,,,,
+SHAK27,"Fitfth Beach, mid intertidal sand bar",51.641874,-128.154426,,GPS,2017,7,26,,,Dudas Sarah,Hand collecting,Ocean Coast,Beach ,Sand,Unclassified,,,,
+SHAK29,"Fifth and Seventh Beach, ",51.64004037,-128.1538597,,GPS,2017,7,26,,,Dudas Sarah,Hand collecting,Ocean Coast,Beach ,Unclassified,Unclassified,,,,
+SHAK24,"Piles Beach, mid intertidal, sand/mud",51.643512,-128.086747,,GPS,2017,7,26,,,Dudas Sarah,Hand collecting,Bay,Beach ,Mud,Unclassified,,,,
+SHAK28,"Sixth Beach, high intertidal, sandy",51.639689,-128.153543,,GPS,2017,7,26,,,Dudas Sarah,Hand collecting,Ocean Coast,Beach ,Sand,Unclassified,,,,
+XHAK01,Maey Channel ARMS,51.66461667,-128.0945833,,iPad (collector),2017,7,29,7.3,,Monteith Zach,"Hand collecting, SCUBA",Ocean Coast,Boulder Field,Boulder,Benthic Macroalgae,,,,"benthic kelp, agarum fimbriatum"
+DHAK01,Maey Channel ARMS vicinity,51.66459,-128.09457,,,2017,7,29,7.3,,Monteith Zach,"Hand collecting, SCUBA",Ocean Coast,Boulder Field,Boulder,Benthic Macroalgae,,,,"benthic kelp, agarum fimbriatum"
+XHAK02,Rattenbury Island ARMS,51.70118333,-128.0738667,,iPad (collector),2017,7,30,5.2,,Monteith Zach,"Hand collecting, SCUBA",Ocean Coast,Rock Outcrop,Bedrock,Coralline Algae,,,,encrusting corallines
+DHAK02,Rattenbury Island ARMS vicinity,51.7012,-128.07399,,,2017,7,30,5.2,,Monteith Zach,"Hand collecting, SCUBA",Ocean Coast,Rock Outcrop,Bedrock,Coralline Algae,,,,encrusting corallines
+IHAK21,Mecury Islet,51.74363,-128.07129,,,2017,7,30,14,7,Van Maanen Derek,"Hand collecting, SCUBA",Ocean Coast,Scarp/Wall,Bedrock,Coralline algae,,,,"urchin barren, encrusting corallines"
+IHAK22,Mercury Islet,51.74363,-128.07129,,iPad (Collector),2017,7,30,15,5,Van Maanen Derek,"Hand collecting, SCUBA",Ocean Coast,Scarp/Wall,Bedrock,Coralline algae,,,,"urchin barren, encrusting corallines"
+XHAK03,Mercury Islet ARMS,51.74418333,-128.0713667,,iPad (collector),2017,7,31,5,,Monteith Zach,"Hand collecting, SCUBA",Ocean Coast,Rock Outcrop,Bedrock,Coralline algae,,,,"urchin barren, encrusting corallines"
+DHAK03,Mercury Islet ARMS vicinity,51.74403,-128.0711,,,2017,7,31,18,,Monteith Zach,"Hand collecting, SCUBA",Ocean Coast,Rock Outcrop,Bedrock,Coralline algae,,,,"urchin barren, encrusting corallines"
+IHAK29,West Beach Trail,51.6552,-128.1315,,,2017,8,1,,,Bemis Amanda,Hand collecting,,,,,,,,
+IHAK30,"Pigu Island, Choked Pass",51.67649696,-128.1220643,,,2017,8,1,5,,Ueno Daisuke,"Hand collecting, snorkel",Ocean Coast,Island,Bedrock,Benthic Macroalgae,,,,Kelp and Seagrass Edge
+IHAK31,Triquet Island Macro site,51.80571667,-128.2579833,,iPad (collector),2017,8,1,8,,Paulay Gustav,"Hand collecting, SCUBA",Ocean Coast,Boulder Field,Rock Substrate,Benthic Macroalgae,,,,macrocystis forest
+IHAK33a,Triquet Island Macro site Holdfast sample,51.80571667,-128.2579833,,iPad (collector),2017,8,1,8,,Paulay Gustav,"Hand collecting, SCUBA",Ocean Coast,Boulder Field,Rock Substrate,Benthic Macroalgae,,,,sample of macrocystis holdfast
+IHAK33b,Triquet Island Macro site Algae sample,51.80571667,-128.2579833,,iPad (collector),2017,8,1,8,,Paulay Gustav,"Hand collecting, SCUBA",Ocean Coast,Boulder Field,Rock Substrate,Benthic Macroalgae,,,,bulk sample of algae
+XHAK04,Spider Island ARMS,51.84151667,-128.2643333,,iPad (collector),2017,8,1,9,,Hall Kyle,"Hand collecting, SCUBA",Ocean Coast,Boulder Field,Rock Substrate,Benthic Macroalgae,,,,Mixed kelp forest
+DHAK04,Spider Island ARMS vicinity,51.84149306,-128.2563099,,,2017,8,1,9,,Hall Kyle | Acharya-Patel Neha,"Hand collecting, SCUBA",Ocean Coast,Boulder Field,Rock Substrate,Benthic Macroalgae,,,,Mixed kelp forest
+IHAK32,Pruth Dock,51.654551,-128.1290903,,iPad (colector),2017,8,1,5,,Daisuke Ueno,"Hand collecting, snorkel",Bay,Dock/Pier,Unclassified,Unclassified,,,,
+IHAK33,North Beach Nero Site,51.667117,-128.14035,,iPad (colector),2017,8,1,5,,Aaron Galloway,"Hand collecting, SCUBA",Ocean Coast,Boulder Field,Rock Substrate,Benthic Macroalgae,,,,Nereocystis Forest
+IHAK33a,North Beach Nero Site Algae Sample,51.667117,-128.14035,,iPad (colector),2017,8,1,5,,Aaron Galloway,"Hand collecting, SCUBA",Ocean Coast,Boulder Field,Rock Substrate,Benthic Macroalgae,,,,sample of nereocystis
+IHAK33b,North Beach Nero Site Sand Sample,51.667117,-128.14035,,iPad (colector),2017,8,1,5,,Aaron Galloway,"Hand collecting, SCUBA",Ocean Coast,Boulder Field,Sand,Benthic Macroalgae,,,,nearby sand sample
+IHAK34,Pruth Dock,51.65457452,-128.1291345,,iPad (collector),2017,8,1,,,Marcus Campbell,Hand collecting,Bay,Dock/Pier,Artificial,Unclassified,,,,
+THAK01,"Pruth Bay, rocks on the North side",51.65531477,-128.1287527,,iPad (collector),2017,8,2,5,,Prinzing Tanya,"Hand collecting, snorkel",Bay,Rock Outcrop,Rock Substrate,Benthic Macroalgae,,,,Understory kelps
+IHAK35,East end of North Beach,51.66477866,-128.13488,,iPad (collector),2017,8,2,,,Mandy Bemis,Hand collecting,Ocean Coast,Tidepool,Rock Substrate,Unclassified,,,,
+IHAK35a,East end of North Beach Tidepool Sand,51.66477866,-128.13488,,iPad (collector),2017,8,2,,,Mandy Bemis,Hand collecting,Ocean Coast,Tidepool,Sand,Benthic Macroalgae,,,,
+IHAK35b,East end of North Beach Tidepool Algae,51.66477866,-128.13488,,iPad (collector),2017,8,2,,,Mandy Bemis,Hand collecting,Ocean Coast,Tidepool,Rock Substrate,Benthic Macroalgae,,,,
+IHAK35c,East end of North Beach Beachwash Algae,51.66477866,-128.13488,,iPad (collector),2017,8,2,,,Mandy Bemis,Hand collecting,Ocean Coast,Tidepool,Sand,Benthic Macroalgae,,,,
+IHAK36,West Beach Nero Site,51.649467,-128.155367,,iPad (collector),2017,8,2,5,,Paulay Gustav,"Hand collecting, SCUBA",Ocean Coast,Boulder Field,Rock Substrate,Benthic Macroalgae,,,,macrocystis forest
+IHAK36a,West Beach Nero Site Coralline Algae,51.649467,-128.155367,,iPad (collector),2017,8,2,5,,Paulay Gustav,"Hand collecting, SCUBA",Ocean Coast,Boulder Field,Rock Substrate,Coralline Algae,,,,
+IHAK36b,West Beach Nero Site Large Barnacles,51.649467,-128.155367,,iPad (collector),2017,8,2,5,,Paulay Gustav,"Hand collecting, SCUBA",Ocean Coast,Boulder Field,Rock Substrate,Barnacles,,,,
+IHAK36c,West Beach Nero Site Detritus,51.649467,-128.155367,,iPad (collector),2017,8,2,5,,Paulay Gustav,"Hand collecting, SCUBA",Ocean Coast,Boulder Field,Organic Detritus,Unclassified,,,,
+IHAK37,Crazy Town surge channel,51.66718749,-128.1343658,,iPad (collector),2017,8,2,5,,Paulay Gustav,"Hand collecting, SCUBA",Ocean Coast,Rock Outcrop,Bedrock,Unclassified,,,,
+IHAK38,North Beach,51.66335674,-128.1408141,,iPad (collector),2017,8,2,5,,Daisuke Ueno,"Hand collecting, snorkel",Ocean Coast,Beach ,Rock Substrate,Unclassified,,,,
+DHAK50,Triquet Bay Seagrass Site,51.809,-128.236,,iPad (collector),2017,8,2,9,,Hall Kyle | Prinzing Tanya,"Hand collecting, SCUBA",Bay,Unclassified,Sand,Seagrass Bed,,,,
+XHAK05,Lyte Group ARMS vicinity,51.81435,-128.2370167,,iPad (collector),2017,8,2,9,,Hall Kyle | Prinzing Tanya,"Hand collecting, SCUBA",Ocean Coast,Island,Boulder,Benthic Macroalgae,,,,macrocystis forest
+XHAK05a,Lyte Group ARMS device,51.81435,-128.2370167,,iPad (collector),2017,8,2,9,,Hall Kyle | Prinzing Tanya,"Hand collecting, SCUBA",Ocean Coast,Island,Boulder,Benthic Macroalgae,,,,macrocystis forest
+IHAK39,Rattenbury Island North East,51.70098097,-128.0739607,,iPad (collector),2017,8,2,12,,Monteith Zach | Hall Kyle | Lamb Andy | Galloway Aaron | Whippo Ross,"Hand collecting, SCUBA",Ocean Coast,Rock Outcrop,Rock Substrate,Coralline Algae,,,,Urchin Barren
+IHAK40,Pruth Dock,51.65457452,-128.1291345,,iPad (collector),2017,8,2,2,,Ueno Daisuke,"Hand collecting, snorkel",Bay,Dock/Pier,Artificial,Unclassified,,,,
+IHAK41,Lookout Bog Forest Sediment,51.65132064,-128.1371586,,,2017,8,3,,,Bemis Amanda,Hand collecting,,,,,,,,
+IHAK42,Starfish Rocky Reef Site,51.68044308,-128.1268385,,iPad (collector),2017,8,3,18,,Paulay Gustav et al,"Hand collecting, SCUBA",Ocean Coast,Rock Outcrop,Rock Substrate,Benthic Macroalgae,,,,Nereocystis Forest
+IHAK42a,Starfish Rocky Reef Site Sediment Bucket,51.68044308,-128.1268385,,iPad (collector),2017,8,3,9,,Paulay Gustav et al,"Hand collecting, SCUBA",Ocean Coast,Rock Outcrop,Sand,Benthic Macroalgae,,,,Nereocystis Forest
+IHAK42b,"Choked Pass, Outer Sandspit Sediment",51.68056807,-128.1163011,,iPad (collector),2017,8,3,5,,Paulay Gustav,"Hand collecting, SCUBA",Ocean Coast,Beach ,Sand,Unclassified,,,,
+IHAK43,Triquet ,51.809,-128.236,,iPad (collector),2017,8,3,5,,Ueno Daisuke,"Hand collecting, snorkel",Bay,Beach ,Sand,Seagrass Bed,,,,
+IHAK44,Rattenbury Pinnacle,51.69130276,-128.0795337,,iPad (collector),2017,8,3,21,,VanMaanen Derek | Pontier Ondine | Galloway Aaron | Lamb Andy,"Hand collecting, SCUBA",Ocean Coast,Rock Outcrop,Rock Substrate,Unclassified,,,,
+FHAK07,GOG4: Goose Island South,51.90397,-128.43958,,GPS,2017,7,26,3,,FABS,Beach Seine,Ocean Coast,Beach ,Sand,Seagrass Bed,,,,
+FHAK08,GOG1: Goose Island Southwest,51.92505,-128.46851,,GPS,2017,7,26,3,,FABS,Beach Seine,Ocean Coast,Beach ,Sand,Seagrass Bed,,,,
+FHAK09,KOE3: koeye Estuary Mouth,51.7756,-127.87876,,GPS,2017,7,27,3,,FABS,Beach Seine,Riverine Estuary,Beach ,Sand,Benthic Macroalgae,,,,understory kelp
+FHAK10,KOE1: Koeye Estuary big sand beach,51.77404,-127.87433,,GPS,2017,7,27,3,,FABS,Beach Seine,Riverine Estuary,Beach ,Sand,Unclassified,,,,
+FHAK11,FAN1: McMullens North,52.0607,-128.41402,,GPS,2017,7,27,3,,FABS,Beach Seine,Ocean Coast,Beach ,Sand,Seagrass Bed,,,,
+FHAK12,FAN3: McMullens South,52.05347,-128.40262,,GPS,2017,7,27,3,,FABS,Beach Seine,Ocean Coast,Beach ,Sand,Seagrass Bed,,,,
+FHAK13,HAB4: Marten Beach,51.6653,-128.07896,,GPS,2017,7,20,3,,FABS,Beach Seine,Bay,Beach ,mud,Benthic Macroalgae,,,,ulva/gracilaria
+FHAK14,HAB2: North Beach,51.66382,-128.1368,,GPS,2017,7,21,3,,FABS,Beach Seine,Ocean Coast,Beach ,Sand,Unclassified,,,,
+FHAK15,FEI3: Kwakume East,51.71321,-127.87064,,GPS,2017,7,22,3,,FABS,Beach Seine,Bay,Beach ,Mud,Seagrass Bed,,,,
+FHAK16,FEI4: Kwakume West,51.70667,-127.8847,,GPS,2017,7,22,3,,FABS,Beach Seine,Bay,Beach ,Gravel,Seagrass Bed,,,,
+IHAK15,Headland between Sixth and Seventh Beach,51.64076,-128.15534,,iPad (collector),2017,7,28,,,Paulay Gustav,Hand Collecting,Ocean Coast,Rock Outcrop,Rock Substrate,Seagrass Bed,,,,phyllospadix
+IHAK16,Gravel beach between dock and barge ramp,51.65409,-128.12973,,,2017,7,29,,,Staude Craig,Hand Collecting,Bay,Beach ,Gravel,Unclassified,,,,
+IHAK18,Hakai Dock,51.65456,-128.12926,,,2017,7,29,,,Froese Tyrel,Hand Collecting,Bay,Dock/Pier,Artificial,Unclassified,,,,
+IHAK19,Sediment from under dock,51.65457758,-128.1289436,,,2017,7,29,6,,Radashevsky Vasily,Hand Collecting/Scuba,Bay,Unclassified,Mud,Unclassified,,,,
+IHAK17,South end of West Beach,51.6527,-128.14177,,iPad (collector),2017,7,29,5,,Ueno Daisuke | Bemis Amanda,Hand Collecting/Snorkel,Ocean Coast,Beach ,Sand,Benthic Macroalgae,,,,Kelp
+IHAK20,Meay Channel,51.66538007,-128.0951357,,iPad (collector),2017,7,30,18,,Paulay Gustav,Hand Collecting,Bay,Beach ,Algal Substrate,Microphytobenthos,,,,flocculant 
+IHAK23,Kelpie Point,51.73363,-127.99724,,iPad (collector),2017,7,31,15,,Paulay Gustav et al,Hand Collecting/Scuba,Ocean Coast,Rock Outcrop,Bedrock,Coralline Algae,,,,urchin barren/Corallines
+IHAK24,"Pruth Bay, South of barge ramp",51.65415024,-128.1295365,,iPad (collector),2017,7,31,,,Staude Craig,Hand Collecting,Bay,Beach ,Gravel,Unclassified,,,,
+IHAK25,Trail between West Beach and Second Beach,51.6512,-128.1415,,,2017,7,31,,,Bemis Amanda,Hand Collecting,,,,,,,,
+IHAK26,West Beach,51.65536863,-128.1416272,,iPad (collector),2017,7,31,,,Gehman Alyssa,Hand Collecting,Ocean Coast,Beach ,Algal Substrate,Benthic Macroalgae,,,,Macrosystis 
+IHAK27,Pruth Lagoon,51.65677996,-128.1305268,,iPad (collector),2017,7,31,,,Radashevsky Vasily,Hand Collecting,Lagoonal Estuary,Inlet,Gravel,Benthic Macroalgae,,,,fucus
+IHAK28,Second Beach ,51.64614893,-128.1498805,,iPad (collector),2017,7,31,5,,Ueno Daisuke,Hand Collecting/Snorkel,Ocean Coast,Beach ,Rock Substrate,Unclassified,,,,
+IHAK29,Trial between Lodge and West Beach,51.6552,-128.1315,,GPS,2017,8,1,,,Bemis Amanda,Hand Collecting,,,,,,,,
+IHAK45,Choked Pocket seining site,51.67621696,-128.1237771,,iPad (collector),2017,8,4,4,,VanMaanen Derek,Hand Collecting/Scuba,Ocean Coast,Beach ,Shell Hash,Seagrass Bed,,,,
+IHAK46a,"Choked Pass, North Pigu Island, seagrass collection",51.67629307,-128.1222137,,iPad (collector),2017,8,4,6,,VanMaanen Derek,Hand Collecting/Scuba,Ocean Coast,Island,Unclassified,Seagrass Bed,,,,
+IHAK46b,"Choked Pass, North Pigu, Sediment",51.67629307,-128.1222137,,iPad (collector),2017,8,4,6,,VanMaanen Derek,Hand Collecting/Scuba,Ocean Coast,Island,Unclassified,Seagrass Bed,,,,
+IHAK47a,"Choked Pass, Lower Island, seagrass collection",51.67830361,-128.1265344,,iPad (collector),2017,8,4,8,,VanMaanen Derek,Hand Collecting/Scuba,Ocean Coast,Island,Unclassified,Seagrass Bed,,,,
+IHAK47b,"Choked Pass, Lower Island, sediment collection",51.67830361,-128.1265344,,iPad (colector),2017,8,4,8,,VanMaanen Derek,Hand Collecting/Scuba,Ocean Coast,Island,Gravel,Seagrass Bed,,,,
+IHAK48a,"Choked Pass, Interior 6, Nearshore seagreass transect",51.67583379,-128.1189034,,iPad (collector),2017,8,4,10,,VanMaanen Derek,Hand Collecting/Scuba,Ocean Coast,Inlet,Unclassified,Seagrass Bed,,,,
+IHAK48b,"Choked Pass, Interior 6, Nearshore seagrass transect, sediment sample ",51.67583379,-128.1189034,,iPad (collector),2017,8,4,10,,VanMaanen Derek,Hand Collecting/Scuba,Ocean Coast,Inlet,Unclassified,Seagrass Bed,,,,
+IHAK48c,"Choked Pass, Interior 6, Nearshore seagrass transect, other (perhaps associated with rhizomes)",51.67583379,-128.1189034,,iPad (collector),2017,8,4,10,,VanMaanen Derek,Hand Collecting/Scuba,Ocean Coast,Inlet,Unclassified,Seagrass Bed,,,,
+IHAK46c,"Choked Pass, North Pigu Island",51.67629307,-128.1222137,,iPad (collector),2017,8,4,6,,Ueno Daisuke,Hand Collecting/Snorkel,Ocean Coast,Island,Rock Substrate,Seagrass Bed,,,,
+IHAK49,Pruth Dock,51.65457452,-128.1291345,,iPad (collector),2017,8,4,,,Pontier Ondine,Hand Collecting,Bay,Dock/Pier,Artificial,Unclassified,,,,
+IHAK50,"Hakai Passage, Port Reef",51.69665815,-128.1048619,,iPad (collector),2017,8,4,21,,Pontier Ondine,Hand Collecting/Scuba,Ocean Coast,Island,Rock Substrate,Unclassified,,,,
+IHAK50a,"Hakai Passage, Port Reef, Underwater Vacuum",51.69665815,-128.1048619,,iPad (collector),2017,8,4,21,,Galloway Aaron,Vacuum/Scuba,Ocean Coast,Island,Rock Substrate,Unclassified,,,,
+KHAK01,Pilings beneath Griswold Lab,51.65453755,-128.1296829,,iPad (collector),2017,8,4,,,Dr Alex's Kids,Hand Collecting,Bay,Beach ,Gravel,Unclassified,,,,
+ZHAK05,"North Beach, West wall, low intertidal mussel core",51.66347,-128.14542,,GPS,2017,8,5,,,Harley Chris,Mussel Core,Ocean Coast,Scarp/Wall,Rock Substrate,Mussel Reef,,,,
+ZHAK06,"North Beach, West wall, low intertidal mussel core",51.66347,-128.14542,,GPS,2017,8,5,,,Harley Chris,Mussel Core,Ocean Coast,Scarp/Wall,Rock Substrate,Mussel Reef,,,,
+ZHAK07,"North Beach, West Wall, Mid intertidal, scrapings",51.66347,-128.14542,,GPS,2017,8,5,,,Harley Chris,Mussel Core,Ocean Coast,Scarp/Wall,Rock Substrate,Unclassified,,,,
+ZHAK08,"North Beach, West Wall, Mid intertidal, scrapings",51.66347,-128.14542,,GPS,2017,8,5,,,Harley Chris,Mussel Core,Ocean Coast,Scarp/Wall,Rock Substrate,Unclassified,,,,
+IHAK51,Pruth Lagoon,51.65548732,-128.1297444,,GPS,2017,8,5,,,Bemis Amanda | Bachen Krystal,Hand Collecting,Bay,Inlet,Sand,Benthic Macroalgae,,,,fucus
+ZHAK09,"North Beach, West wall, high intertidal",51.66347,-128.14542,,GPS,2017,8,5,,,Neufeld Chris,Hand Collecting,Ocean Coast,Beach ,Rock Substrate,Unclassified,,,,
+IHAK52,Mouth of Kwakshua,51.65519,-127.95982,,iPad (collector),2017,8,5,22,5,Pauly Gustav et al,Hand Collecting/Scuba,Ocean Coast,Rock Outcrop,Rock Substrate,Unclassified,,,,
+IHAK52a,Mouth of Kwakshua,51.65519,-127.95982,,iPad (collector),2017,8,5,22,5,Pauly Gustav et al,Vacuum/Scuba,Ocean Coast,Rock Outcrop,Rock Substrate,Unclassified,,,,
+IHAK52b,"Mouth of Kwakshua, Barnacles",51.65519,-127.95982,,iPad (collector),2017,8,5,22,5,Pauly Gustav et al,"Hand collecting, SCUBA",Ocean Coast,Rock Outcrop,Rock Substrate,Barnacles,,,,giant barnacle
+IHAK53,"Choked Pass, Outer Sandspit",51.67909226,-128.1160909,,iPad (collector),2017,8,5,12,5,Pontier Ondine,"Hand collecting, SCUBA",Ocean Coast,Beach ,Sand,Seagrass Bed,,,,
+IHAK54,Puth Bay Dock,51.65457452,-128.1291345,,iPad (collector),2017,8,5,5,0,Ueno Daisuke,Hand Collecting/Snorkel,Bay,Dock/Pier,Artificial,Unclassified,,,,
+IHAK55,Kwakshua Petroglyph Cliff,51.65579547,-128.0295892,,iPad (collector),2017,8,5,21,5,Paulay Gustav et al,"Hand collecting, SCUBA",Ocean Coast,Scarp/Wall,Rock Substrate,Unclassified,,,,
+ZHAK10,"Third Beach, Rocky bench, mid intertidal",51.64695,-128.14846,,iPad (collector),2017,8,5,,,Harley Chris,Hand collecting,Ocean Coast,Beach ,Rock Substrate,Unclassified,,,,
+IHAK56,Starfish Island,51.68017349,-128.1271694,,iPad (collector),2017,8,5,5,0,Ueno Daisuke,Hand Collecting/Snorkel,Ocean Coast,Island,Rock Substrate,Benthic Macroalgae,,,,Nereocystis Forest
+ZHAK11,"Third Beach, Rocky Bench",51.64695,-128.14846,,iPad (collector),2017,8,6,,,Harley Chris,Hand collecting,Ocean Coast,Beach ,Rock Substrate,Unclassified,,,,
+ZHAK12,"Third Beach, Rocky Bench",51.64695,-128.14846,,iPad (collector),2017,8,6,,,Harley Chris,Hand collecting,Ocean Coast,Beach ,Rock Substrate,Unclassified,,,,
+ZHAK13,"Third Beach, Rocky bench, mussel core",51.64695,-128.14846,,iPad (collector),2017,8,6,,,Harley Chris,Hand collecting,Ocean Coast,Beach ,Rock Substrate,Mussel Reef,,,,
+ZHAK14,"Third Beach, Rocky bench, mussel core",51.64673,-128.14863,,iPad (collector),2017,8,6,,,Harley Chris,Hand collecting,Ocean Coast,Beach ,Rock Substrate,Mussel Reef,,,,
+ZHAK15,"Third Beach, Sand, Low intertidal",51.64673,-128.14863,,iPad (collector),2017,8,6,,,Harley Chris,Hand collecting,Ocean Coast,Beach ,Sand,Unclassified,,,,
+ZHAK16,"Fourth Beach, Stream outflow on sand",51.64326,-128.15126,,iPad (collector),2017,8,6,,,Neufeld Chris,Hand collecting,Ocean Coast,Beach ,Sand,Unclassified,,,,
+XHAK11,Starfish ARMS,51.80363333,-128.2541667,,iPad (collector),2017,8,6,5,,Hall Kyle | Monteith Zach,"Hand collecting, SCUBA",Ocean Coast,Island,Rock Substrate,Benthic Macroalgae,,,,ARMS
+DHAK11,Starfish ARMS vacinity,51.68022482,-128.1261495,,iPad (collector),2017,8,6,5,,Hall Kyle | Monteith Zach,"Hand collecting, SCUBA",Ocean Coast,Island,Rock Substrate,Benthic Macroalgae,,,,Nereocystis Forest
+PHAK01,Kwakshua Channel at Meay ,51.65404248,-128.0971118,,iPad (collector),2017,8,6,40,,VanMaanen Derek | Pontier Ondine,Ponar Dredge,Ocean Coast,Inlet,Sand,Unclassified,,,,
+IHAK57,Trail between West Beach and North Beach,51.6619,-128.1446,,GPS,2017,8,6,,,Bemis Amanda,Hand collecting,,,,,,,,
+IHAK58,Big Spring Creek,51.65006377,-128.0691928,,iPad (collector),2017,8,6,12,2,Paulay Gustav et al,"Hand collecting, SCUBA",Bay,Inlet,Shell Hash,Seagrass Bed,,,,
+IHAK59,"Pruth Bay, Nearshore seagrass site",51.64610688,-128.1195703,,iPad (collector),2017,8,6,9,9,VanMaanen Derek,"Hand collecting, SCUBA",Bay,Inlet,Mud,Seagrass Bed,,,,
+IHAK60,Rattenbury Pinnacle,51.69130276,-128.0795337,,iPad (collector),2017,8,7,21,5,Paulay Gustav et al,"Hand collecting, SCUBA",Ocean Coast,Inlet,Rock Substrate,Unclassified,,,,
+ZHAK17,"Seveth Beach, Rock wall, Mid intertidal, Mussel core",51.63835,-128.14714,,iPad (collector),2017,8,7,,,Harley Chris,Mussel Core,Ocean Coast,Beach ,Rock Substrate,Mussel Reef,,,,
+ZHAK18,"Seventh Beach, Rock wall, Mid intertidal",51.63852435,-128.1473118,,iPad (collector),2017,8,7,,,Harley Chris,Hand collecting,Ocean Coast,Beach ,Rock Substrate,Unclassified,,,,
+ZHAK19,"Seventh Beach, Rock wall, Mid intertidal",51.63763044,-128.1470722,,iPad (collector),2017,8,7,,,Harley Chris,Hand collecting,Ocean Coast,Beach ,Rock Substrate,Unclassified,,,,
+ZHAK20,"Seveth Beach, Rock wall, Mid intertidal, Mussel core",51.63835,-128.14714,,iPad (collector),2017,8,7,,,Harley Chris,Mussel Core,Ocean Coast,Beach ,Rock Substrate,Mussel Reef,,,,
+IHAK61,"Rattenbury ARMS site, sediment sample",51.70107743,-128.0738394,,iPad (collector),2017,8,7,12,,VanMaanen Derek,"Hand collecting, SCUBA",Ocean Coast,Island,Shell Hash,Unclassified,,,,
+IHAK62,Rattenbury ARMS site,51.7010775,-128.0739973,,iPad (collector),2017,8,7,12,5,Galloway Aaron,"Hand collecting, SCUBA",Ocean Coast,Island,Rock Substrate,Unclassified,,,,
+IHAK63,Goldstream,51.73055008,-128.0092286,,iPad (collector),2017,8,7,12,5,Galloway Aaron,Hand collecting,Bay,Inlet,Rock Substrate,Unclassified,,,,
+IHAK64,Goldstream sediment sample,51.73070883,-128.0085985,,iPad (collector),2017,8,7,20,,VanMaanen Derek,"Hand collecting, SCUBA",Bay,Inlet,Shell Hash,Unclassified,,,,
+ZHAK21,Pruth Lagoon mouth,51.65517677,-128.1297345,,iPad (collector),2017,8,7,,,Gehman Alyssa,Hand collecting,Bay,Inlet,Gravel,Benthic Macroalgae,,,,fucus
+IHAK65,"North Beach, East Boulders",51.6648,-128.13513,,GPS,2017,8,8,,,Paulay Gustav | Bemis Amanda | Whalen Matt,Hand collecting,Ocean Coast,Beach ,Boulder,Unclassified,,,,
+IHAK66,"Crazy Town, North Beach",51.66683,-128.13389,,GPS,2017,8,8,,,Paulay Gustav et al,Hand collecting,Ocean Coast,Rock Outcrop,Rock Substrate,Unclassified,,,,
+ZHAK22,"North Beach, Surf Island notch, mid intertidal, mussel core",51.66523,-128.14671,,GPS,2017,8,8,,,Harley Chris | Gehman Alyssa,Mussel Core,Ocean Coast,Beach ,Rock Substrate,Mussel Reef,,,,
+ZHAK23,"North Beach, Surf Island notch",51.66546,-128.14632,,GPS,2017,8,8,,,Harley Chris | Neufeld Chris | Gehman Alyssa,Hand collecting,Ocean Coast,Beach ,Rock Substrate,Mussel Reef,,,,
+ZHAK24,"North Beach, Surf Islans notch, low interidal",51.66546,-128.14632,,GPS,2017,8,8,,,Harley Chris | Neufeld Chris | Gehman Alyssa,Hand collecting,Ocean Coast,Beach ,Rock Substrate,Mussel Reef,,,,
+ZHAK25,"North Beach, Surf Island notch, low intertidal",51.66546,-128.14632,,GPS,2017,8,8,,,Harley Chris | Neufeld Chris | Gehman Alyssa,Hand collecting,Ocean Coast,Beach ,Rock Substrate,Mussel Reef,,,,
+ZHAK27,Lira Vera canal,51.66738,-128.13347,,GPS,2017,8,8,,,Harley Chris | Neufeld Chris | Gehman Alyssa,Hand collecting,Ocean Coast,Beach ,Rock Substrate,Mussel Reef,,,,
+ZHAK28,"North Beach, Surf Island notch, mid intertidal, mussel core",51.66523,-128.14671,,GPS,2017,8,8,,,Harley Chris | Neufeld Chris | Gehman Alyssa,Hand collecting,Ocean Coast,Beach ,Rock Substrate,Unclassified,,,,
+IHAK67,Under the Pruth Bay dock,51.65456021,-128.1293348,,iPad (collector),2017,8,8,6,,Paulay Gustav et al,"Hand collecting, SCUBA",Bay,Dock/Pier,Mud,Unclassified,,,,
+IHAK68,"West Beach, High Intertidal, Sand",51.655,-128.139,,iPad (collector),2017,8,8,,,Staude Craig,Hand collecting,Ocean Coast,Beach ,Sand,Unclassified,,,,
+IHAK69,"North Beach, Hight intertidal, Sand",51.66276431,-128.1397309,,GPS,2017,8,8,,,Staude Craig,Hand collecting,Ocean Coast,Beach ,Sand,Unclassified,,,,
+IHAK70,North Beach pond,51.665,-128.122,,GPS,2017,8,8,,,Staude Craig,Hand collecting,,,,,,,,
+IHAK72,Pruth Lagoon,51.65677996,-128.1305268,,iPad (collector),2017,8,8,,,Radashevsky Vasily,Hand Collecting,Lagoonal Estuary,Inlet,Gravel,Benthic Macroalgae,,,,
+IHAK73,"South end of 10th beach, intertidal on rocks",51.634,-128.1464,,GPS,2017,8,9,,,Bemis Amanda,Hand collecting,Ocean Coast,Beach ,Bedrock,Unclassified,,,,
+IHAK74,"Trail between West Beach and lodge, near yurts",51.6556,-128.132,,GPS,2017,8,9,,,Bemis Amanda,Hand collecting,Ocean Coast,Beach ,Organic Detritus,Unclassified,,,,
+IHAK75,Second Beach high tide line,51.6488,-128.147358,,GPS,2017,8,9,,,Choong Henry,Hand collecting,Ocean Coast,Beach ,Sand,Unclassified,,,,
+IHAK76,Seventh Beach mussel bed assoc w ZHAK17,51.63823,-128.14714,,GPS,2017,8,9,,,Choong Henry,Hand collecting,Ocean Coast,Rock Outcrop,Bedrock,Mussel Reef,,,,
+ZHAK30,West Beach south mussel bed,51.652443,-128.141432,,GPS,2017,8,9,,,Harley Chris | Neufeld Chris | Gehman Alyssa | Galloway Aaron,Hand collecting,Ocean Coast,Rock Outcrop,Bedrock,Mussel Reef,,,,
+ZHAK31,West Beach south mussel bed,51.652443,-128.141432,,GPS,2017,8,9,,,Harley Chris | Neufeld Chris | Gehman Alyssa | Galloway Aaron,Hand collecting,Ocean Coast,Rock Outcrop,Bedrock,Mussel Reef,,,,
+ZHAK32,West Beach south semibalanus bed,51.652443,-128.141432,,GPS,2017,8,9,,,Harley Chris | Neufeld Chris | Gehman Alyssa | Galloway Aaron,Hand collecting,Ocean Coast,Rock Outcrop,Bedrock,Barnacles,,,,
+ZHAK33,West Beach south semibalanus bed,51.652443,-128.141432,,GPS,2017,8,9,,,Harley Chris | Neufeld Chris | Gehman Alyssa | Galloway Aaron,Hand collecting,Ocean Coast,Rock Outcrop,Bedrock,Barnacles,,,,
+IHAK77,6th beach intertidal,51.639884,-128.154596,,GPS,2017,8,9,,,Ueno Daisuke,Hand collecting,Ocean Coast,Rock Outcrop,Bedrock,Unclassified,,,,
+ZHAK35,5th beach Sasquatchs Camode,51.64229,-128.16281,,GPS,2017,8,9,,,Harley Chris | Neufeld Chris | Gehman Alyssa | Sarah,Hand collecting,Ocean Coast,Rock Outcrop,Bedrock,Unclassified,,,,
+IHAK78,Hakai dock,51.654597,-128.12881,,,2017,8,9,,,Paulay Gustav,Hand collecting,Bay,Dock/Pier,Artificial,Unclassified,,,,
+IHAK79,Hakai dock night time with light,51.654597,-128.12881,,GPS,2017,8,9,,,Paulay Gustav,Hand collecting,Bay,Dock/Pier,Artificial,Unclassified,,,,
+IHAK80,5th beach interdital,51.642068,-128.157182,,GPS,2017,8,10,,,Ueno Daisuke,Hand collecting,Bay,Rock Outcrop,Bedrock,Unclassified,,,,
+ZHAK36,Kwakshua south west collections,51.64983,-128.06857,,GPS,2017,8,10,,,Harley Chris | Neufeld Chris | Gehman Alyssa | Sarah,Hand collecting,Bay,Inlet,Boulder,Unclassified,,,,
+ZHAK37,Kwakshua SM,51.64991,-128.02664,,GPS,2017,8,10,,,Harley Chris | Neufeld Chris | Gehman Alyssa | Sarah,Hand collecting,Bay,Inlet,Boulder,Unclassified,,,,
+ZHAK38,"Tree mussel bed, Kwakshua SE",51.64824,-127.99674,,GPS,2017,8,10,,,Harley Chris | Neufeld Chris | Gehman Alyssa | Sarah,Hand collecting,Bay,Inlet,Wood,Attached Mussels,,,,
+ZHAK39,"Tree mussel bed, Kwakshua SE",51.64824,-127.99674,,GPS,2017,8,10,,,Harley Chris | Neufeld Chris | Gehman Alyssa | Sarah,Hand collecting,Bay,Inlet,Wood,Attached Mussels,,,,
+ZHAK40,"Semibalanus bed, Kwakshua SE",51.64824,-127.99674,,GPS,2017,8,10,,,Harley Chris | Neufeld Chris | Gehman Alyssa | Sarah,Hand collecting,Bay,Inlet,Boulder,Barnacles,,,,
+ZHAK41,"Nucella lamellosa, Kwakshua SE",51.64824,-127.99674,,GPS,2017,8,10,,,Harley Chris | Neufeld Chris | Gehman Alyssa | Sarah,Hand collecting,Bay,Inlet,Boulder,Barnacles,,,,
+IHAK81,West Beach south end,51.65216,-128.14235,,GPS,2017,8,10,,,Staude Craig,Hand collecting,Ocean Coast,Boulder Field,Boulder,Unclassified,,,,
+XHAK06,Triquet ARMS,51.73073333,-128.0090833,,iPad (collector),2017,8,3,5,,Hall Kyle | Prinzing Tanya,"Hand collecting, SCUBA",Ocean Coast,Island,Bedrock,Benthic Macroalgae,,,,
+XHAK07,Goldstream ARMS,51.64908333,-128.1511667,,iPad (collector),2017,8,4,5,,Hall Kyle | Prinzing Tanya,"Hand collecting, SCUBA",Ocean Coast,Rock Outcrop,Bedrock,Coralline algae,,,,
+XHAK08,Westbeach ARMS,51.7339,-127.9967167,,iPad (collector),2017,8,4,5,,Hall Kyle | Prinzing Tanya,"Hand collecting, SCUBA",Ocean Coast,Rock Outcrop,Bedrock,Benthic Macroalgae,,,,
+XHAK09,Kelpie Point ARMS,51.6491,-128.15525,,iPad (collector),2017,8,5,5,,Hall Kyle | Prinzing Tanya,"Hand collecting, SCUBA",Ocean Coast,Rock Outcrop,Bedrock,Coralline algae,,,,
+XHAK10,Second(westbeach) ARMS,51.68025,-128.1261,,iPad (collector),2017,8,5,5,,Hall Kyle | Prinzing Tanya,"Hand collecting, SCUBA",Ocean Coast,Rock Outcrop,Bedrock,Benthic Macroalgae,,,,
+XHAK12,Northbeach ARMS,51.66703333,-128.13995,,iPad (collector),2017,8,7,5,,Hall Kyle | Monteith Zach,"Hand collecting, SCUBA",Ocean Coast,Rock Outcrop,Bedrock,Benthic Macroalgae,,,,
+VHAK01,Mercury,51.7441833,-128.0713667,50,GPS,2017,7,30,5.5,,Whippo Ross | Galloway Aaron,Reef Life Survey,Ocean Coast,Rock Outcrop,Rock Substrate,Unclassified,,,,
+VHAK02,Kelpie Point,51.7339,-127.9967167,50,GPS,2017,7,31,5.75,,Whippo Ross | Galloway Aaron,Reef Life Survey,Ocean Coast,Rock Outcrop,Rock Substrate,Unclassified,,,,
+VHAK03,West Beach,51.6490833,-128.1511667,50,GPS,2017,7,31,5,,Whippo Ross | Galloway Aaron,Reef Life Survey,Ocean Coast,Rock Outcrop,Rock Substrate,Macroalgae,,,,
+VHAK04,Triquet,51.8036333,-128.2541667,50,GPS,2017,8,1,5.5,,Whippo Ross | Galloway Aaron,Reef Life Survey,Ocean Coast,Rock Outcrop,Rock Substrate,Macroalgae,,,,
+VHAK05,North Beach,51.6670333,-128.13995,50,GPS,2017,8,1,8,,Whippo Ross | Galloway Aaron,Reef Life Survey,Ocean Coast,Rock Outcrop,Rock Substrate,Unclassified,,,,
+VHAK06,West Beach Nereo,51.6491,-128.15525,50,GPS,2017,8,2,5.5,,Whippo Ross | Galloway Aaron,Reef Life Survey,Ocean Coast,Rock Outcrop,Rock Substrate,Macroalgae,,,,
+VHAK07,Rattenbury,51.7011833,-128.0738667,50,GPS,2017,8,2,4.75,,Whippo Ross | Galloway Aaron,Reef Life Survey,Ocean Coast,Rock Outcrop,Rock Substrate,Unclassified,,,,
+VHAK08,Starfish,51.68025,-128.1261,50,GPS,2017,8,3,4.5,,Whippo Ross | Galloway Aaron,Reef Life Survey,Ocean Coast,Rock Outcrop,Rock Substrate,Macroalgae,,,,
+VHAK09,Meay,51.6646167,-128.0945833,50,GPS,2017,7,30,3,,Whippo Ross | Galloway Aaron,None,Bay,Inlet,Rock Substrate,Unclassified,,,,
