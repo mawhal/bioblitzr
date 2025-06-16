@@ -4,6 +4,7 @@
 # load packages
 library(tidyverse)
 # library(lubridate)
+library(VennDiagram)
 #
 
 # practice reading files
@@ -54,3 +55,11 @@ sum(dnames %in% knames)
 paste( "percent found in Kozloff =", 
        round( sum(knames %in% dnames) / 
                 length(knames) * 100, 1),"%" )
+
+# how to make to a venn diagram in R?
+
+venn.plot <- draw.pairwise.venn(length(knames), length(dnames), sum(dnames %in% knames), 
+                                c("Kozloff", "2017 BioBlitz"),
+                                fill = "orange")
+grid.draw(venn.plot) 
+grid.newpage()
