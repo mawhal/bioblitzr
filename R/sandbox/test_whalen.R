@@ -56,10 +56,21 @@ paste( "percent found in Kozloff =",
        round( sum(knames %in% dnames) / 
                 length(knames) * 100, 1),"%" )
 
-# how to make to a venn diagram in R?
+# how to make to a Venn diagram in R?
 
 venn.plot <- draw.pairwise.venn(length(knames), length(dnames), sum(dnames %in% knames), 
                                 c("Kozloff", "2017 BioBlitz"),
                                 fill = "orange")
 grid.draw(venn.plot) 
 grid.newpage()
+
+
+
+## 17 June 2025
+# goals:
+# - learn how to deal with merge conflicts (always pull before you start working)
+# - back to data - dealing with taxonomic resolution
+# - if time: 
+# homework: we all read Andrew's recent paper on detecting extirpations
+#   view PDF version for color images
+
