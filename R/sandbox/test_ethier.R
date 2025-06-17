@@ -55,3 +55,38 @@ grid.newpage()
 venn.plot <- draw.pairwise.venn(length(knames), length(dnames), sum(dnames %in% knames), c ("Kozloff", "2017 BioBlitz"))
 grid.draw(venn.plot)
 grid.newpage()
+
+#reading
+dnames
+
+#cleaning up data to account for missing data like LOST LABLE and NA
+df_filtered <- df %>% filter(column_name != "LOST LABELS")
+#^failed
+filter(column_name != "LOST LABELS")
+#^failed
+remove_val_labels("LOST LABELS")
+#^failed
+filter_if("LOST LABELS")
+#^failed
+dnames %>% filter(col1 != "LOST LABELS")
+#^failed
+#how to omit NA
+na.omit(dnames)
+#or
+is.na(dnames)
+dnames=="LOST LABLES"
+dnames=="LOST LABELS"
+#^asking to identify any strings in the data as "LOST LABELS"
+dnames!="LOST LABELS"
+#^reverses the above identification
+dnames[1]
+#feeds back the [1] data in the data
+dnames[1:10]
+dnames[dnames!="LOST LABELS"]
+dnames[!is.na(dnames)]
+dnames=dnames[dnames!="LOST LABELS"]
+dnames=dnames[!is.na(dnames)]
+dnames
+#trying to only focus on the first part of a name. 
+strsplit(names, " ")[[1]][1]
+#^fail
