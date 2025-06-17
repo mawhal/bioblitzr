@@ -70,7 +70,28 @@ grid.newpage()
 # goals:
 # - learn how to deal with merge conflicts (always pull before you start working)
 # - back to data - dealing with taxonomic resolution
-# - if time: 
+# - if time: learn to branch repo
 # homework: we all read Andrew's recent paper on detecting extirpations
 #   view PDF version for color images
 
+
+# taxonomic resolution
+dnames
+knames
+# 
+
+na.omit(dnames)
+is.na(dnames)
+dnames == "LOST LABELS"
+dnames != "LOST LABELS"
+
+# subsetting
+dnames[1:10]
+dnames = dnames[dnames != "LOST LABELS"]
+dnames = dnames[!is.na(dnames)]
+
+
+
+# use regular expressions
+gsub("(\\w+)", "\\1", knames) #unable to translate 'Lophaster furcilliger<a0>Fisher, 1905' to a wide string
+gsub("([A-Za-z]+).*", "\\1", dnames)
