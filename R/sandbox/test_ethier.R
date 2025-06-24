@@ -90,3 +90,7 @@ dnames
 #trying to only focus on the first part of a name. 
 strsplit(names, " ")[[1]][1]
 #^fail
+
+# use regular expressions
+gsub("(\\w+)", "\\1", knames) #unable to translate 'Lophaster furcilliger<a0>Fisher, 1905' to a wide string
+gsub("([A-Za-z]+).*", "\\1", dnames)
