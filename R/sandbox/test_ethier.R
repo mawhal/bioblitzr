@@ -60,16 +60,7 @@ grid.newpage()
 dnames
 
 #cleaning up data to account for missing data like LOST LABLE and NA
-df_filtered <- df %>% filter(column_name != "LOST LABELS")
-#^failed
-filter(column_name != "LOST LABELS")
-#^failed
-remove_val_labels("LOST LABELS")
-#^failed
-filter_if("LOST LABELS")
-#^failed
-dnames %>% filter(col1 != "LOST LABELS")
-#^failed
+
 #how to omit NA
 na.omit(dnames)
 #or
