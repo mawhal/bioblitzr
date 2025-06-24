@@ -84,4 +84,8 @@ strsplit(names, " ")[[1]][1]
 
 # use regular expressions
 gsub("(\\w+)", "\\1", knames) #unable to translate 'Lophaster furcilliger<a0>Fisher, 1905' to a wide string
+#^ wont remove first names, see code below for knames
+
 gsub("([A-Za-z]+).*", "\\1", dnames)
+gsub("([A-Za-z]+).*", "\\1", knames)
+
