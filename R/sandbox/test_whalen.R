@@ -1,6 +1,13 @@
 ### test script
 # started on 13 June 2025
 
+test_and_compare <- function(blitz_data, historical_data){
+  
+}
+
+test_and_compare(dnames, knames)
+
+
 # load packages
 library(tidyverse)
 # library(lubridate)
@@ -9,6 +16,7 @@ library(VennDiagram)
 
 # practice reading files
 d = read_csv("test_data/MarineGEOBC_bioblitz_specimen_20180403.csv")
+m = read_csv("test_data/MarineGEOBC_bioblitz_station_20180403.csv")
 k = read_csv("test_data/Koz_list.csv")
 
 # goals for week 16 June 2025
@@ -93,5 +101,23 @@ dnames = dnames[!is.na(dnames)]
 
 
 # use regular expressions
-gsub("([A-Za-z]+).*", "\\1", knames) #unable to translate 'Lophaster furcilliger<a0>Fisher, 1905' to a wide string
-  gsub("([A-Za-z]+).*", "\\1", dnames)
+gsub("(\\w+)", "\\1", knames) #unable to translate 'Lophaster furcilliger<a0>Fisher, 1905' to a wide string
+gsub("([A-Za-z]+).*", "\\1", dnames)
+gsub("([A-Za-z]+).*", "\\1", knames)
+
+
+
+### Notes
+# add taxonomy to species or genus lists for later breakdown
+
+
+
+### Practice merging - 
+# one need is to include geotags for each specimen
+View(m)
+mselect <- m %>% select(eventID, decimalLatitude, decimalLongitude) 
+dselect <- d %>% select(eventID = `eventID (station #)`, morphospecies = `scientificName (morphospecies)`)
+
+dmerge <- left_join( dselect, mselect )
+
+with(dmerge, plot(y = decimalLatitude, x = decimalLongitude) )
