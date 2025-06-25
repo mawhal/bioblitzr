@@ -52,4 +52,4 @@ rsconnect/
 *.svg
 
 # ignore macOS files
-.DS_Store
+*.DS_Store
