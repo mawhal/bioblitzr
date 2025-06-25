@@ -104,4 +104,23 @@ with(dmerge, plot(y = decimalLatitude, x = decimalLongitude) )
 #attempting to raster
 install.packages("tidyterra")
 library(tidyterra)
-spat_raster <- as_spatraster(df, coords= c("decimalLongitude", "decimalLatitude"))
+spat_raster <- as_spatraster(dmerge, xycols= 4:3, crs = "", digits = 0)
+
+install.packages("raster")
+install.packages("sf")
+install.packages("sp")
+library(sf)
+library(raster)
+library(sp)
+
+#code from Whalen
+# transform CRS
+dmerge2 <- st_as_sf(dmerge, coords = c("decimalLongitude","decimalLatitude") )
+# simple_df2 <- st_transform( simple_df, crs = 4326)
+
+#define raster resolution
+bbox <- st_bbox(dmerge2)
+res <- 30
+
+#raster template
+raster_template <- raster(extent(bbox), res = res)
