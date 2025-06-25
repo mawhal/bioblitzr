@@ -15,6 +15,7 @@ k = read_csv("test_data/koz_list.csv")
 
 view(d)
 view(k)
+m = read_csv("test_data/MarineGEOBC_bioblitz_station_20180403.csv")
 
 class(d)
 
@@ -89,3 +90,18 @@ gsub("(\\w+)", "\\1", knames) #unable to translate 'Lophaster furcilliger<a0>Fis
 gsub("([A-Za-z]+).*", "\\1", dnames)
 gsub("([A-Za-z]+).*", "\\1", knames)
 
+
+### Practice merging - 
+# one need is to include geotags for each specimen
+View(m)
+mselect <- m %>% select(eventID, decimalLatitude, decimalLongitude) 
+dselect <- d %>% select(eventID = `eventID (station #)`, morphospecies = `scientificName (morphospecies)`)
+
+dmerge <- left_join( dselect, mselect )
+
+with(dmerge, plot(y = decimalLatitude, x = decimalLongitude) )
+
+#attempting to raster
+install.packages("tidyterra")
+library(tidyterra)
+spat_raster <- as_spatraster(df, coords= c("decimalLongitude", "decimalLatitude"))
