@@ -124,3 +124,9 @@ res <- 30
 
 #raster template
 raster_template <- raster(extent(bbox), res = res)
+
+
+#trying to clean dmerge missing data
+dmerge= na.omit(dmerge)
+
+dmerge2 <- st_as_sf(dmerge, coords = c("decimalLongitude","decimalLatitude") )
