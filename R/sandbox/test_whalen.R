@@ -73,6 +73,44 @@ grid.draw(venn.plot)
 grid.newpage()
 
 
+length(knames)
+length(dnames)
+sum(dnames %in% knames)
+
+
+unique(k$Phylum)
+unique(d$Phylum)
+unique(d$Phylum) %in% unique(k$Phylum)
+unique(d$Phylum)[!(unique(d$Phylum) %in% unique(k$Phylum))]
+
+dcompare <- d %>% dplyr::select( species = `scientificName (morphospecies)`,
+                          Phylum, Genus) %>% distinct() 
+kcompare <- k %>% dplyr::select( species = ScientificName_accepted,
+                          Phylum, Genus) %>% distinct() 
+
+# code to repeat calculations for each Phylum
+# use a "for loop" to calculate the same quantities over each Phylum
+confirmed  <- c()
+new_report <- c()
+undetected <- c()
+
+for( i in 1:length(unique(k$Phylum)) ){
+  confirmed[i]  = sum(dcompare$species[dcompare$Phylum == unique(k$Phylum)[i]] %in% kcompare$species[kcompare$Phylum == unique(k$Phylum)[i]])
+  new_report[i] = sum(!(dcompare$species[dcompare$Phylum == unique(k$Phylum)[i]] %in% kcompare$species[kcompare$Phylum == unique(k$Phylum)[i]]))
+  undetected[i] = sum(!(kcompare$species[kcompare$Phylum == unique(k$Phylum)[i]] %in% dcompare$species[dcompare$Phylum == unique(k$Phylum)[i]]))
+}
+
+phyla_compare <- data.frame( Phylum = unique(k$Phylum), confirmed, new_report, undetected )
+
+data_long <- phyla_compare %>%
+  pivot_longer( !Phylum, names_to = "category", values_to = "count")
+
+
+# stacked barplot
+ggplot( d = data_long, aes(y = count, x = Phylum, fill = category) ) +
+  geom_bar(stat = "identity", position = "stack") +
+  coord_flip()
+
 
 ## 17 June 2025
 # goals:
@@ -121,3 +159,65 @@ dselect <- d %>% select(eventID = `eventID (station #)`, morphospecies = `scient
 dmerge <- left_join( dselect, mselect )
 
 with(dmerge, plot(y = decimalLatitude, x = decimalLongitude) )
+
+# redo the merge without the suffix letters (e.g., IHAK23c vs IHAK23)
+mselect$eventID <- substr(mselect$eventID,1,6)
+mselect <- distinct(mselect)
+dselect$eventID <- substr(dselect$eventID,1,6)
+
+dmerge <- left_join( dselect, mselect )
+# remove NA values - some of which need to be removed anyway
+dmerge <- dmerge[ !is.na(dmerge$decimalLatitude),]
+with(dmerge, plot(y = decimalLatitude, x = decimalLongitude) )
+
+
+# practice with making grid and working with geolocation to assess total counts, effort, etc
+
+# load libraries
+# library(USAboundaries)
+library(bcmaps)
+library(sf)
+library(raster)
+
+
+# access baselayer map - code adapted from BIOL490 urban ecology course taught in Fall 2024
+bcbase <- bc_bound()
+bcraw <- st_geometry( bcbase )
+# bc <- bcraw
+plot(bcraw)
+
+# convert geolocation data
+dmerge[is.na(dmerge$decimalLatitude),]
+dsf <- st_as_sf( dmerge, coords = c("decimalLongitude","decimalLatitude"),
+                                           crs = 3005 ) 
+# convert to meters
+utm_zone <- 9
+# Transform to UTM (meters)
+dsftr <- st_transform(dsf, crs = paste0("+proj=utm +zone=", utm_zone, " +ellps=WGS84 +datum=WGS84 +units=m +no_defs"))
+
+dsftr <- st_transform( dsftr, crs = 3005 )
+bctr <- st_transform( bcraw, crs = 3005 )
+plot(bctr)
+points(dsftr)
+
+projection(dsf) <- projection(bcraw)
+st_crs(dsf) <- st_crs(bcraw)
+st_crs(dsf)
+
+
+# crop map to bounding box of data
+bbox <- st_bbox(dsf)
+res <- 0.3
+
+bccrop <- st_crop( bcraw, bbox )
+plot(bccrop)
+#
+# Potentially helpful links
+# <https://stackoverflow.com/questions/48437569/how-to-crop-a-polygon-from-an-underlying-grid-with-the-r-sf-package>
+#
+#
+
+# grid
+grid <- st_make_grid(mpol, cellsize=0.5)
+area <- st_area(grid)
+grid <- st_as_sf(data.frame(ID=c(1:length(area)), area=area, geometry=grid))
