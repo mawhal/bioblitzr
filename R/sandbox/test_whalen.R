@@ -153,8 +153,8 @@ gsub("([A-Za-z]+).*", "\\1", knames)
 ### Practice merging - 
 # one need is to include geotags for each specimen
 View(m)
-mselect <- m %>% select(eventID, decimalLatitude, decimalLongitude) 
-dselect <- d %>% select(eventID = `eventID (station #)`, morphospecies = `scientificName (morphospecies)`)
+mselect <- m %>% dplyr::select(eventID, decimalLatitude, decimalLongitude) 
+dselect <- d %>% dplyr::select(eventID = `eventID (station #)`, morphospecies = `scientificName (morphospecies)`)
 
 dmerge <- left_join( dselect, mselect )
 
@@ -218,6 +218,43 @@ plot(bccrop)
 #
 
 # grid
-grid <- st_make_grid(mpol, cellsize=0.5)
+grid <- st_make_grid(dsf, cellsize = .03)
+plot(grid)
+points(dsf)
+
 area <- st_area(grid)
 grid <- st_as_sf(data.frame(ID=c(1:length(area)), area=area, geometry=grid))
+plot(grid)
+points(dsf)
+
+
+tmp <- st_intersection(grid, dsf)
+tmp$area <- st_area(tmp)
+tmp$frac <- tmp$area/unique(round(area,6))
+summary(tmp$frac)
+plot(tmp['frac'])
+
+
+### number of points per grid cell
+# see <https://www.google.com/search?q=r+sf+point+density+in+grid&rlz=1C1JZAP_enCA978CA978&oq=r+sf+point+density+in+grid&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigATIHCAUQIRigATIHCAYQIRirAjIHCAcQIRirAjIHCAgQIRifBTIHCAkQIRifBdIBCDg5NzZqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8>
+# see also <https://dieghernan.github.io/202312_bertin_dots/#:~:text=Beautiful%20Maps%20with%20R%20(V):%20Point%20densities.&text=The%20issue%20here%20is%20that%20terra%20does,than%20each%20cell%20on%20the%20aggregated%20raster.>
+# Perform spatial join
+joined_data <- st_join(grid, dsf)
+
+# Count points per cell
+density_data <- joined_data %>%
+  group_by(geometry) %>%
+  summarize(point_count = n()) %>% 
+  filter( point_count > 1)
+
+summary(density_data$point_count)
+unique(density_data$point_count)
+
+# Visualize using ggplot2
+ggplot() +
+  geom_sf(data = density_data, aes(fill = point_count), color = NA) +
+  scale_fill_viridis_c() +
+  theme_minimal() +
+  labs(fill = "Point Density")
+plot.new()
+plot(dsf)
