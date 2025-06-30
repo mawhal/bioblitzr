@@ -79,9 +79,7 @@ dnames[!is.na(dnames)]
 dnames=dnames[dnames!="LOST LABELS"]
 dnames=dnames[!is.na(dnames)]
 dnames
-#trying to only focus on the first part of a name. 
-strsplit(names, " ")[[1]][1]
-#^fail
+
 
 # use regular expressions
 gsub("(\\w+)", "\\1", knames) #unable to translate 'Lophaster furcilliger<a0>Fisher, 1905' to a wide string
@@ -101,14 +99,12 @@ dmerge <- left_join( dselect, mselect )
 
 with(dmerge, plot(y = decimalLatitude, x = decimalLongitude) )
 
-#attempting to raster
-install.packages("tidyterra")
-library(tidyterra)
-spat_raster <- as_spatraster(dmerge, xycols= 4:3, crs = "", digits = 0)
 
+#attempting to raster
 install.packages("raster")
 install.packages("sf")
 install.packages("sp")
+#look deeper into SF package to use the decimal corr. 
 library(sf)
 library(raster)
 library(sp)
@@ -130,3 +126,10 @@ raster_template <- raster(extent(bbox), res = res)
 dmerge= na.omit(dmerge)
 
 dmerge2 <- st_as_sf(dmerge, coords = c("decimalLongitude","decimalLatitude") )
+
+my_raster<- raster("dmerge2")
+
+
+#wild shot inspired from Dr. Faisons code, 
+dgraph <-ggplot(dmerge, aes(x = decimalLongitude, y = decimalLatitude))
+geom_density(dgraph)
