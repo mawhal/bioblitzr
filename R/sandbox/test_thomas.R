@@ -18,8 +18,6 @@ k = read_csv("test_data/Koz_list.csv")
 
 
 
-# goals for next week
-
 
 #access to columns 
 d
@@ -71,11 +69,37 @@ venn.plot <- draw.pairwise.venn(length(knames), length(dnames), sum(dnames %in% 
 grid.draw(venn.plot) 
 grid.newpage()
 
+unique(k$Phylum)
+unique(d$Phylum)
+unique(d$Phylum) %in% unique(k$Phylum)
+unique(d$Phylum)[!(unique(d$Phylum) %in% unique(k$Phylum))]
+
+dcompare <- d %>% dplyr::select( species = `scientificName (morphospecies)`,
+                                 Phylum, Genus) %>% distinct() 
+kcompare <- k %>% dplyr::select( species = ScientificName_accepted,
+                                 Phylum, Genus) %>% distinct() 
+# code to repeat calculations for each Phylum
+# use a "for loop" to calculate the same quantities over each Phylum
+confirmed  <- c()
+new_report <- c()
+undetected <- c()
+for( i in 1:length(unique(k$Phylum)) ){
+  confirmed[i] = sum(dcompare$species[dcompare$Phylum = unique(k$Phylum)[i]] %in% kcompare$species[kcompare$Phylum = unique(k$Phylum)[i]])
+  new_report[i] 
+  undetected[i]
+}
+  for( i in 1:length(unique(k$Phylum)) ){
+    confirmed[i]  = sum(dcompare$species[dcompare$Phylum == unique(k$Phylum)[i]] %in% kcompare$species[kcompare$Phylum == unique(k$Phylum)[i]])
+    new_report[i] = sum(!(dcompare$species[dcompare$Phylum == unique(k$Phylum)[i]] %in% kcompare$species[kcompare$Phylum == unique(k$Phylum)[i]]))
+    undetected[i] = sum(!(kcompare$species[kcompare$Phylum == unique(k$Phylum)[i]] %in% dcompare$species[dcompare$Phylum == unique(k$Phylum)[i]]))
+  }
+
 
 #stacked bar plot 
+
 data <- data.frame(
-category = c("dnames", "knames", "na"),
-  sub_category = c("X", "X", "X", "Y", "Y", "Y"),
+category = c("dnamesfirst", "knamesfirst", "na"),
+  sub_category = c("dnames", "knames", "na", "Y", "Y", "Y"),
   value = c(10, 15, 7, 12, 8, 11)
 )
 
