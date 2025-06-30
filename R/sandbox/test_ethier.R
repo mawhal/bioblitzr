@@ -92,26 +92,24 @@ gsub("([A-Za-z]+).*", "\\1", knames)
 ### Practice merging - 
 # one need is to include geotags for each specimen
 View(m)
-mselect <- m %>% select(eventID, decimalLatitude, decimalLongitude) 
-dselect <- d %>% select(eventID = `eventID (station #)`, morphospecies = `scientificName (morphospecies)`)
+mselect <- m %>% dplyr::select(eventID, decimalLatitude, decimalLongitude) 
+dselect <- d %>% dplyr::select(eventID = `eventID (station #)`, morphospecies = `scientificName (morphospecies)`)
 
-dmerge <- left_join( dselect, mselect )
+?selectdmerge <- left_join( dselect, mselect )
 
 with(dmerge, plot(y = decimalLatitude, x = decimalLongitude) )
 
 
-#attempting to raster
-install.packages("raster")
-install.packages("sf")
-install.packages("sp")
+
 #look deeper into SF package to use the decimal corr. 
+
 library(sf)
 library(raster)
 library(sp)
 
 #code from Whalen
 # transform CRS
-dmerge2 <- st_as_sf(dmerge, coords = c("decimalLongitude","decimalLatitude") )
+dmerge2 <- st_as_sf(dmerge, coords = c("decimalLongitude","decimalLatitude"))
 # simple_df2 <- st_transform( simple_df, crs = 4326)
 
 #define raster resolution
@@ -132,4 +130,5 @@ my_raster<- raster("dmerge2")
 
 #wild shot inspired from Dr. Faisons code, 
 dgraph <-ggplot(dmerge, aes(x = decimalLongitude, y = decimalLatitude))
-geom_density(dgraph)
+geom_density()
+dgraph
