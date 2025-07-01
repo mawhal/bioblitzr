@@ -445,7 +445,7 @@ st_bbox(density_data)
 
 #new attempt?
 dsf <- st_as_sf(dmerge, coords = c("decimalLongitude", "decimalLatitude"), crs = 4326)  # lat/lon
-dsf <- st_transform(dsf, crs = 3005)  # reproject to match bcraw
+dsf <- st_transform(dsf, crs = 3005)  # reproject to match bcraw, by converting to meeter
 
 grid <- st_make_grid(dsf, cellsize = 0.03)
 grid_sf <- st_as_sf(data.frame(ID = seq_along(grid), geometry = grid))
@@ -465,6 +465,7 @@ ggplot() +
   theme_minimal() +
   labs(fill = "Point Density")
 
+#This is the code that reconfigured to allow grid and data to align on map corrd.
 grid <- st_make_grid(dsf, cellsize = 3000)  # meters; tweak as needed
 grid_sf <- st_as_sf(data.frame(ID = seq_along(grid), geometry = grid))
 joined <- st_join(grid_sf, dsf)
