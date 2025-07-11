@@ -121,3 +121,9 @@ ggplot(data_long, aes(x = category, y = count, fill = sub_category)) +
        y = "Count",
        fill = "Sub-category") +
   theme_bw()
+# taxize package 
+#
+taxize::classification 
+classification("Dendronotus", db = "worms")
+result <- classification("Dendronotus", db = "worms")
+
