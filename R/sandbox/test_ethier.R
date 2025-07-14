@@ -187,9 +187,8 @@ bcraw <- st_geometry( bcbase )
 plot(bcraw)
 
 # convert geolocation data
-dmerge[is.na(dmerge$decimalLatitude),]
-dsf <- st_as_sf( dmerge, coords = c("decimalLongitude","decimalLatitude"),
-                 crs = 3005 ) 
+
+
 # convert to meters
 utm_zone <- 9
 # Transform to UTM (meters)
@@ -218,7 +217,7 @@ plot(bccrop)
 #
 
 # grid
-grid <- st_make_grid(dsf, cellsize = .03)
+grid <- st_make_grid(dsf, cellsize = .3)
 plot(grid)
 points(dsf)
 
@@ -294,7 +293,7 @@ ggplot() +
 
 #TEST TO PLOT ON MAP/GRID
 # Fix: Proper density grid with unique ID
-grid <- st_make_grid(dsf, cellsize = 0.03)
+grid <- st_make_grid(dsf, cellsize = 0.3)
 grid <- st_as_sf(data.frame(ID = seq_along(grid), geometry = grid))
 
 # Spatial join points to grid cells
@@ -318,7 +317,7 @@ ggplot() +
 
 #Try 2
 # Create grid
-grid <- st_make_grid(dsf, cellsize = 0.03)
+grid <- st_make_grid(dsf, cellsize = 0.3)
 grid_sf <- st_as_sf(data.frame(ID = seq_along(grid), geometry = grid))
 
 # Join points to grid cells
@@ -447,7 +446,7 @@ st_bbox(density_data)
 dsf <- st_as_sf(dmerge, coords = c("decimalLongitude", "decimalLatitude"), crs = 4326)  # lat/lon
 dsf <- st_transform(dsf, crs = 3005)  # reproject to match bcraw, by converting to meeter
 
-grid <- st_make_grid(dsf, cellsize = 0.03)
+grid <- st_make_grid(dsf, cellsize = .03) #This is the argument for cellzise creation
 grid_sf <- st_as_sf(data.frame(ID = seq_along(grid), geometry = grid))
 
 joined <- st_join(grid_sf, dsf)
@@ -455,7 +454,7 @@ joined <- st_join(grid_sf, dsf)
 density_data <- joined %>%
   group_by(ID) %>%
   summarize(point_count = n(), geometry = st_geometry(first(geometry))) %>%
-  filter(point_count > 1)
+  filter(point_count > 0)
 
 ggplot() +
   geom_sf(data = bcraw, fill = "gray90", color = "white") +
@@ -466,7 +465,7 @@ ggplot() +
   labs(fill = "Point Density")
 
 #This is the code that reconfigured to allow grid and data to align on map corrd.
-grid <- st_make_grid(dsf, cellsize = 3000)  # meters; tweak as needed
+grid <- st_make_grid(dsf, cellsize = .03)  # meters; tweak as needed
 grid_sf <- st_as_sf(data.frame(ID = seq_along(grid), geometry = grid))
 joined <- st_join(grid_sf, dsf)
 
@@ -498,3 +497,4 @@ ggplot() +
   ) +
   theme_minimal() +
   labs(fill = "Point Density")
+
