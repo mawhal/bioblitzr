@@ -465,7 +465,10 @@ ggplot() +
   labs(fill = "Point Density")
 
 #This is the code that reconfigured to allow grid and data to align on map corrd.
-grid <- st_make_grid(dsf, cellsize = .03)  # meters; tweak as needed
+dsf <- st_as_sf(dmerge, coords = c("decimalLongitude", "decimalLatitude"), crs = 4326)  # lat/lon
+dsf <- st_transform(dsf, crs = 3005)  # reproject to match bcraw, by converting to meeter
+
+grid <- st_make_grid(dsf, cellsize =)  # meters; tweak as needed
 grid_sf <- st_as_sf(data.frame(ID = seq_along(grid), geometry = grid))
 joined <- st_join(grid_sf, dsf)
 
@@ -474,7 +477,7 @@ density_data <- joined %>%
   summarize(point_count = n(), geometry = st_geometry(first(geometry))) %>%
   filter(point_count > 1)
 
-#YESSSSSSSSSS
+#Creates a map that shows a WIDE view of the area
 ggplot() +
   geom_sf(data = bcraw, fill = "gray90", color = "white") +
   geom_sf(data = density_data, aes(fill = point_count), color = "black", alpha = 0.9) +
@@ -483,9 +486,9 @@ ggplot() +
   labs(fill = "Point Density")
 
 
-#THIS ONE THIS ONE THIS ONE!!!!!!!!!!
+#This creates a more zoomed in view of the area being studied. 
 bbox <- st_bbox(density_data)
-pad <- 10000
+pad <- 1000
 
 ggplot() +
   geom_sf(data = bcraw, fill = "gray90", color = "white") +
@@ -497,4 +500,3 @@ ggplot() +
   ) +
   theme_minimal() +
   labs(fill = "Point Density")
-
