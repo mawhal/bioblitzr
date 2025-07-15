@@ -88,26 +88,74 @@ dcompare <- d %>% dplyr::select( species = `scientificName (morphospecies)`,
 kcompare <- k %>% dplyr::select( species = ScientificName_accepted,
                           Phylum, Genus) %>% distinct() 
 
+
+
+###----------------------------------
+# new code on 15 July 2025
+# goals
+# use galiano data with stacked barplot code
+originalSummary <- read.csv("test_data/Galiano_Tracheophyta_review_summary_reviewed_2024-10-07-assigned_revised.csv")
+originalSummary$status.short <- originalSummary$Reporting.Status
+originalSummary$status.short <- gsub("new.*", "new", originalSummary$status.short)
+d <- originalSummary %>% 
+  filter( Reporting.Status %in% c("new", "confirmed"))
+k <- originalSummary %>% 
+  filter( Reporting.Status %in% c("reported", "confirmed"))
+
+# add flexibility for taxonomic level to compare
+level = "Family"
+d$level <- d[, level]
+k$level <- k[, level]
+
+dcompare <- d %>% dplyr::select( species = Taxon,
+                                 level, Genus) %>% distinct() 
+kcompare <- k %>% dplyr::select( species = Taxon,
+                                 level, Genus) %>% distinct() 
+
+
+###---------------------------------
+
+
+
+
+
 # code to repeat calculations for each Phylum
 # use a "for loop" to calculate the same quantities over each Phylum
 confirmed  <- c()
 new_report <- c()
 undetected <- c()
 
-for( i in 1:length(unique(k$Phylum)) ){
-  confirmed[i]  = sum(dcompare$species[dcompare$Phylum == unique(k$Phylum)[i]] %in% kcompare$species[kcompare$Phylum == unique(k$Phylum)[i]])
-  new_report[i] = sum(!(dcompare$species[dcompare$Phylum == unique(k$Phylum)[i]] %in% kcompare$species[kcompare$Phylum == unique(k$Phylum)[i]]))
-  undetected[i] = sum(!(kcompare$species[kcompare$Phylum == unique(k$Phylum)[i]] %in% dcompare$species[dcompare$Phylum == unique(k$Phylum)[i]]))
+for( i in 1:length(unique(k$level)) ){
+  confirmed[i]  = sum(dcompare$species[dcompare$level == unique(k$level)[i]] %in% kcompare$species[kcompare$level == unique(k$level)[i]])
+  new_report[i] = sum(!(dcompare$species[dcompare$level == unique(k$level)[i]] %in% kcompare$species[kcompare$level == unique(k$level)[i]]))
+  undetected[i] = sum(!(kcompare$species[kcompare$level == unique(k$level)[i]] %in% dcompare$species[dcompare$level == unique(k$level)[i]]))
 }
 
-phyla_compare <- data.frame( Phylum = unique(k$Phylum), confirmed, new_report, undetected )
+phyla_compare <- data.frame( level = unique(k$level), confirmed, new_report, undetected )
 
 data_long <- phyla_compare %>%
-  pivot_longer( !Phylum, names_to = "category", values_to = "count")
+  pivot_longer( !level, names_to = "category", values_to = "count")
 
+#
+# Vector of plant families (All families you want to include)
+plant_families <- c("Pinaceae", "Sapindaceae", "Berberidaceae", "Fabaceae", "Asteraceae", 
+                    "Poaceae", "Lamiaceae", "Rosaceae", "Amaryllidaceae", "Betulaceae", 
+                    "Apiaceae", "Orobanchaceae", "Ericaceae", "Aspleniaceae", "Athyriaceae", 
+                    "Amaranthaceae", "Asparagaceae", "Brassicaceae", "Orchidaceae", "Cyperaceae", 
+                    "Caryophyllaceae", "Montiaceae", "Thymelaeaceae", "Ranunculaceae", 
+                    "Dryopteridaceae", "Onagraceae", "Equisetaceae", "Geraniaceae", "Phrymaceae", 
+                    "Liliaceae", "Rubiaceae", "Saxifragaceae", "Aquifoliaceae", "Caprifoliaceae", 
+                    "Juncaceae", "Araceae", "Primulaceae", "Malvaceae", "Boraginaceae", 
+                    "Celastraceae", "Pteridaceae", "Plantaginaceae", "Polypodiaceae", 
+                    "Dennstaedtiaceae", "Fagaceae", "Grossulariaceae", "Polygonaceae", 
+                    "Salicaceae", "Viburnaceae", "Crassulaceae", "Selaginellaceae", 
+                    "Blechnaceae", "Taxaceae", "Cupressaceae", "Melanthiaceae", "Violaceae", "Zosteraceae")
+
+# filter by family
+data_long <- data_long %>% filter( level %in% plant_families )
 
 # stacked barplot
-ggplot( d = data_long, aes(y = count, x = Phylum, fill = category) ) +
+ggplot( d = data_long, aes(y = count, x = level, fill = category) ) +
   geom_bar(stat = "identity", position = "stack") +
   coord_flip()
 
