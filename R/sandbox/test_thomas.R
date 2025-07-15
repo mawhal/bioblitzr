@@ -52,29 +52,19 @@ dnames= dnames[!is.na(dnames)]
 dnames=unique(dnames)
 
 
-
+#c combines vectors
 # use regular expressions
 gsub("(\\w+)", "\\1", knames) #unable to translate 'Lophaster furcilliger<a0>Fisher, 1905' to a wide string
 dnamesfirst=unique(gsub("([A-Za-z]+).*", "\\1", dnames)) 
 knamesfirst=gsub("([A-Za-z]+).*", "\\1", knames)
+allnames=unique(c(dnamesfirst, knamesfirst)) 
 
-#use taxize to obtain # Only take a small sample first to avoid long waits or errors
-dnamesfirst_clean <- dnamesfirst[1:20]  # Limit for testing
-
-# Helper function to safely get classification
-get_classification_safe <- function(name) {
-  tryCatch({
-    taxize::classification(name, db = "worms")
-  }, error = function(e) {
-    message(paste("Error retrieving:", name))
-    return(NULL)
-  })
-}
-
-dtax_list[["ligia"]]  # Replace with a name from your list
-
-# Optional: Name the list
-names(dtax_list) <- dnamesfirst_clean
+#taxize package
+#dont run line 64( saved in test_data)
+#classifications=taxize::classification(allnames, db = "worms")
+#write this to disc 
+classifications=do.call(rbind,classifications)
+write_csv(classifications,"test_data/classifications.csv")
 
 
 #venn.diagram()
@@ -115,7 +105,7 @@ for( i in 1:length(unique(k$Phylum)) ){
 
 taxize::classification()
 data <- data.frame(
-category = c("dnamesfirst", "knamesfirst", "na"),
+category = c("dnamesfirst", "knamesfirst", "na")
   sub_category = c("dnames", "knames", "na", "Y", "Y", "Y"),
   value = c(10, 15, 7, 12, 8, 11)
 )
