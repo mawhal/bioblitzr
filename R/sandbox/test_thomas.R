@@ -12,13 +12,9 @@ library(VennDiagram)
 library(ggplot2)
 library(taxize)
 
-
+#data
 d = read_csv("test_data/MarineGEOBC_bioblitz_specimen_20180403.csv")
 k = read_csv("test_data/Koz_list.csv")
-
-
-
-
 
 #access to columns 
 d
@@ -27,8 +23,6 @@ class(d)
 dnames = d$`scientificName (morphospecies)`
 knames = k$ScientificName_accepted
 d$firstname=gsub("([A-Za-z]+).*", "\\1", d$`scientificName (morphospecies)`)
-
-
 
 dnames %in% knames 
 #TRUE 
@@ -58,6 +52,13 @@ gsub("(\\w+)", "\\1", knames) #unable to translate 'Lophaster furcilliger<a0>Fis
 dnamesfirst=unique(gsub("([A-Za-z]+).*", "\\1", dnames)) 
 knamesfirst=gsub("([A-Za-z]+).*", "\\1", knames)
 allnames=unique(c(dnamesfirst, knamesfirst)) 
+
+
+
+
+
+
+
 
 #taxize package
 #dont run line 64( saved in test_data)
