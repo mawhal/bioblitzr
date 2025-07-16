@@ -98,9 +98,9 @@ originalSummary <- read.csv("test_data/Galiano_Tracheophyta_review_summary_revie
 originalSummary$status.short <- originalSummary$Reporting.Status
 originalSummary$status.short <- gsub("new.*", "new", originalSummary$status.short)
 d <- originalSummary %>% 
-  filter( Reporting.Status %in% c("new", "confirmed"))
+  filter( status.short %in% c("new", "confirmed"))
 k <- originalSummary %>% 
-  filter( Reporting.Status %in% c("reported", "confirmed"))
+  filter( status.short %in% c("reported", "confirmed"))
 
 # add flexibility for taxonomic level to compare
 level = "Family"
@@ -125,13 +125,16 @@ confirmed  <- c()
 new_report <- c()
 undetected <- c()
 
-for( i in 1:length(unique(k$level)) ){
-  confirmed[i]  = sum(dcompare$species[dcompare$level == unique(k$level)[i]] %in% kcompare$species[kcompare$level == unique(k$level)[i]])
-  new_report[i] = sum(!(dcompare$species[dcompare$level == unique(k$level)[i]] %in% kcompare$species[kcompare$level == unique(k$level)[i]]))
-  undetected[i] = sum(!(kcompare$species[kcompare$level == unique(k$level)[i]] %in% dcompare$species[dcompare$level == unique(k$level)[i]]))
+levels_all <- c(k$level,d$level)
+levels_sort <- sort(unique(unique(levels_all)))
+
+for( i in 1:length(level_sort) ){
+  confirmed[i]  = sum(dcompare$species[dcompare$level == levels_sort[i]] %in% kcompare$species[kcompare$level == levels_sort[i]])
+  new_report[i] = sum(!(dcompare$species[dcompare$level == levels_sort[i]] %in% kcompare$species[kcompare$level == levels_sort[i]]))
+  undetected[i] = sum(!(kcompare$species[kcompare$level == levels_sort[i]] %in% dcompare$species[dcompare$level == levels_sort[i]]))
 }
 
-phyla_compare <- data.frame( level = unique(k$level), confirmed, new_report, undetected )
+phyla_compare <- data.frame( level = levels_sort, confirmed, new_report, undetected )
 
 data_long <- phyla_compare %>%
   pivot_longer( !level, names_to = "category", values_to = "count")
@@ -155,7 +158,7 @@ plant_families <- c("Pinaceae", "Sapindaceae", "Berberidaceae", "Fabaceae", "Ast
 data_long <- data_long %>% filter( level %in% plant_families )
 
 # stacked barplot
-ggplot( d = data_long, aes(y = count, x = level, fill = category) ) +
+ggplot( d = data_long, aes(y = count, x = fct_rev(level), fill = category) ) +
   geom_bar(stat = "identity", position = "stack") +
   coord_flip()
 
