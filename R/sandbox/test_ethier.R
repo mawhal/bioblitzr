@@ -545,6 +545,3 @@ ggplot() +
   ) +
   theme_minimal() +
   labs(fill = "Density per Species Effort")
-
-####
-
