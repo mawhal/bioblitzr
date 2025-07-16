@@ -1,6 +1,5 @@
 # Stacked bar plot for Phylum 
 
-
 library(lubridate)
 library(tidyverse)
 library(VennDiagram)
@@ -10,8 +9,6 @@ library(ggplot2)
 #files
 d = read_csv("test_data/MarineGEOBC_bioblitz_specimen_20180403.csv")
 k = read_csv("test_data/Koz_list.csv")
-
-
 
 
 #access to columns 
@@ -57,11 +54,34 @@ for( i in 1:length(unique(k$Phylum)) ){
 
 phyla_compare <- data.frame( Phylum = unique(k$Phylum), confirmed, new_report, undetected )
 
+data_long
 data_long <- phyla_compare %>%
   pivot_longer( !Phylum, names_to = "category", values_to = "count")
 
+#test 
+#  Sort Phylum alphabetically A–Z
 
-# stacked barplot
-ggplot( d = data_long, aes(y = count, x = Phylum, fill = category) ) +
+data_long$Phylum <- factor(data_long$Phylum, levels = sort(unique(data_long$Phylum)))
+
+#  Ensure categories match the color names
+data_long$category <- factor(data_long$category, levels = c("confirmed", "new_report", "undetected"))
+
+
+# Sort Phylum alphabetically A–Z (top to bottom in coord_flip)
+
+ggplot( d = data_long, aes(y = count, x = fct_rev(Phylum), fill = category) ) +
   geom_bar(stat = "identity", position = "stack") +
-  coord_flip()
+  coord_flip() +
+  scale_fill_manual(values = c("confirmed" = "red", "new_report" = "purple", "undetected" = "pink")) +
+  labs(title = "Species Comparison by Phylum",
+       x = "Phylum",
+       y = "Species Count",
+       fill = "Category") +
+  theme_minimal()
+
+
+#colors 
+   # "confirmed" = "#EE7624",   # orange
+  #  "new_report" = "#0047BB",  # sky blue
+   # "undetected" = "#B026FF"   # teal green
+#vsu <- c("#0047BB","#EE7624")
