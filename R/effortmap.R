@@ -63,7 +63,7 @@ server <- function(input, output, session) {
         ylim = c(bbox["ymin"] - pad, bbox["ymax"] + pad)
       ) +
       theme_minimal() +
-      labs(fill = "Efficiency")
+      labs(fill = "Effort")
   })
 }
 
