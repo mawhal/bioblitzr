@@ -35,3 +35,4 @@ grid_sf <- st_as_sf(data.frame(ID = seq_along(grid), geometry = grid))
 library(bcmaps)
 bcraw <- st_geometry(bc_bound())
 bcraw <- st_transform(bcraw, crs = 3005)
+
