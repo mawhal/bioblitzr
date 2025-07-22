@@ -199,7 +199,7 @@ bctr <- st_transform( bcraw, crs = 3005 )
 plot(bctr)
 points(dsftr)
 
-projection(dsf) <- projection(bcraw)
+
 st_crs(dsf) <- st_crs(bcraw)
 st_crs(dsf)
 
@@ -217,7 +217,6 @@ plot(bccrop)
 #
 
 # grid
-grid <- st_make_grid(dsf, cellsize = .3)
 plot(grid)
 points(dsf)
 
@@ -292,9 +291,6 @@ ggplot() +
   labs(fill = "Point Density")
 
 #TEST TO PLOT ON MAP/GRID
-# Fix: Proper density grid with unique ID
-grid <- st_make_grid(dsf, cellsize = 0.3)
-grid <- st_as_sf(data.frame(ID = seq_along(grid), geometry = grid))
 
 # Spatial join points to grid cells
 joined <- st_join(grid, dsf)
@@ -314,11 +310,6 @@ ggplot() +
   scale_fill_viridis_c() +
   theme_minimal() +
   labs(fill = "Point Density")
-
-#Try 2
-# Create grid
-grid <- st_make_grid(dsf, cellsize = 0.3)
-grid_sf <- st_as_sf(data.frame(ID = seq_along(grid), geometry = grid))
 
 # Join points to grid cells
 joined <- st_join(grid_sf, dsf)
@@ -446,8 +437,6 @@ st_bbox(density_data)
 dsf <- st_as_sf(dmerge, coords = c("decimalLongitude", "decimalLatitude"), crs = 4326)  # lat/lon
 dsf <- st_transform(dsf, crs = 3005)  # reproject to match bcraw, by converting to meeter
 
-grid <- st_make_grid(dsf, cellsize = .03) #This is the argument for cellzise creation
-grid_sf <- st_as_sf(data.frame(ID = seq_along(grid), geometry = grid))
 
 joined <- st_join(grid_sf, dsf)
 
