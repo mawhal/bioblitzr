@@ -103,32 +103,47 @@ for( i in 1:length(unique(k$Phylum)) ){
 
 
 #stacked bar plot 
+Phylum, Genus) %>% distinct() 
 
-taxize::classification()
-data <- data.frame(
-category = c("dnamesfirst", "knamesfirst", "na"),
-  sub_category = c("dnames", "knames", "na", "Y", "Y", "Y"),
-  value = c(10, 15, 7, 12, 8, 11)
-)
+# code to repeat calculations for each Phylum
+# use a "for loop" to calculate the same quantities over each Phylum
+confirmed  <- c()
+new_report <- c()
+undetected <- c()
 
-data_long <- data %>%
-  pivot_longer(cols = c(value), names_to = "variable", values_to = "count")
+for( i in 1:length(unique(k$Phylum)) ){
+  confirmed[i]  = sum(dcompare$species[dcompare$Phylum == unique(k$Phylum)[i]] %in% kcompare$species[kcompare$Phylum == unique(k$Phylum)[i]])
+  new_report[i] = sum(!(dcompare$species[dcompare$Phylum == unique(k$Phylum)[i]] %in% kcompare$species[kcompare$Phylum == unique(k$Phylum)[i]]))
+  undetected[i] = sum(!(kcompare$species[kcompare$Phylum == unique(k$Phylum)[i]] %in% dcompare$species[dcompare$Phylum == unique(k$Phylum)[i]]))
+}
 
-ggplot(data_long, aes(x = category, y = count, fill = sub_category)) +
+phyla_compare <- data.frame( Phylum = unique(k$Phylum), confirmed, new_report, undetected )
+
+data_long
+data_long <- phyla_compare %>%
+  pivot_longer( !Phylum, names_to = "category", values_to = "count")
+
+#test 
+#  Sort Phylum alphabetically A–Z
+
+data_long$Phylum <- factor(data_long$Phylum, levels = sort(unique(data_long$Phylum)))
+
+#  Ensure categories match the color names
+data_long$category <- factor(data_long$category, levels = c("confirmed", "new_report", "undetected"))
+
+
+# Sort Phylum alphabetically A–Z (top to bottom in coord_flip)
+
+ggplot( d = data_long, aes(y = count, x = fct_rev(Phylum), fill = category) ) +
   geom_bar(stat = "identity", position = "stack") +
-  labs(title = "Stacked Bar Chart",
-       x = "Category",
-       y = "Count",
-       fill = "Sub-category") +
-  theme_bw()
+  coord_flip() +
+  scale_fill_manual(values = c("confirmed" = "red", "new_report" = "purple", "undetected" = "pink")) +
+  labs(title = "Species Comparison by Phylum",
+       x = "Phylum",
+       y = "Species Count",
+       fill = "Category") +
+  theme_minimal()
 
-ggplot(data_long, aes(x = category, y = count, fill = sub_category)) +
-  geom_bar(stat = "identity", position = "stack") +
-  labs(title = "Stacked Bar Chart",
-       x = "Category",
-       y = "Count",
-       fill = "Sub-category") +
-  theme_bw()
 # taxize package 
 
 
@@ -136,10 +151,31 @@ ggplot(data_long, aes(x = category, y = count, fill = sub_category)) +
 taxonomy <- taxize::classification( vector_of_first_word, db = "worms" )
 write_csv(taxonomy, "data/output/taxonomy.csv")
 
+# description
+desc_text <- "
+Package: bioblitzr
+Type: Package
+Title: Bar Plots 
+Version: 0.1.0
+Author: Khadijah Thomas
+Maintainer: Khadijah Thomas <ktho5762@students.vsu.edu>
+Description:Creates bar plots for comparing data.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+"
 
+# Set your package root folder path
+pkg_path <- "/Users/khadijahthomas/Desktop/bioblitzr"
 
+# Write DESCRIPTION file
+writeLines(desc_text, con = file.path(pkg_path, "DESCRIPTION"))
 
+#building the folders and files 
 
+library(roxygen2)
+setwd("/Users/khadijahthomas/Desktop/bioblitzr")
+roxygen2::roxygenise()
 
 
 
