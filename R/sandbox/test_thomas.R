@@ -106,7 +106,7 @@ for( i in 1:length(unique(k$Phylum)) ){
 
 taxize::classification()
 data <- data.frame(
-category = c("dnamesfirst", "knamesfirst", "na")
+category = c("dnamesfirst", "knamesfirst", "na"),
   sub_category = c("dnames", "knames", "na", "Y", "Y", "Y"),
   value = c(10, 15, 7, 12, 8, 11)
 )
@@ -135,3 +135,12 @@ ggplot(data_long, aes(x = category, y = count, fill = sub_category)) +
 
 taxonomy <- taxize::classification( vector_of_first_word, db = "worms" )
 write_csv(taxonomy, "data/output/taxonomy.csv")
+
+
+
+
+
+
+
+
+
