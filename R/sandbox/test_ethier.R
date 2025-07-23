@@ -199,7 +199,7 @@ bctr <- st_transform( bcraw, crs = 3005 )
 plot(bctr)
 points(dsftr)
 
-projection(dsf) <- projection(bcraw)
+
 st_crs(dsf) <- st_crs(bcraw)
 st_crs(dsf)
 
@@ -217,7 +217,6 @@ plot(bccrop)
 #
 
 # grid
-grid <- st_make_grid(dsf, cellsize = .3)
 plot(grid)
 points(dsf)
 
@@ -292,9 +291,6 @@ ggplot() +
   labs(fill = "Point Density")
 
 #TEST TO PLOT ON MAP/GRID
-# Fix: Proper density grid with unique ID
-grid <- st_make_grid(dsf, cellsize = 0.3)
-grid <- st_as_sf(data.frame(ID = seq_along(grid), geometry = grid))
 
 # Spatial join points to grid cells
 joined <- st_join(grid, dsf)
@@ -314,11 +310,6 @@ ggplot() +
   scale_fill_viridis_c() +
   theme_minimal() +
   labs(fill = "Point Density")
-
-#Try 2
-# Create grid
-grid <- st_make_grid(dsf, cellsize = 0.3)
-grid_sf <- st_as_sf(data.frame(ID = seq_along(grid), geometry = grid))
 
 # Join points to grid cells
 joined <- st_join(grid_sf, dsf)
@@ -446,8 +437,6 @@ st_bbox(density_data)
 dsf <- st_as_sf(dmerge, coords = c("decimalLongitude", "decimalLatitude"), crs = 4326)  # lat/lon
 dsf <- st_transform(dsf, crs = 3005)  # reproject to match bcraw, by converting to meeter
 
-grid <- st_make_grid(dsf, cellsize = .03) #This is the argument for cellzise creation
-grid_sf <- st_as_sf(data.frame(ID = seq_along(grid), geometry = grid))
 
 joined <- st_join(grid_sf, dsf)
 
@@ -500,3 +489,49 @@ ggplot() +
   ) +
   theme_minimal() +
   labs(fill = "Point Density")
+
+#new work July 16th (morning run)
+head(dsf$morphospecies)
+joined <- st_join(grid_sf, dsf)
+#calculate species richness
+effort_species <- joined %>%
+  group_by(ID) %>%
+  summarize(species_effort = n_distinct(morphospecies),
+            geometry = st_geometry(first(geometry)))
+#plot results
+ggplot() +
+  geom_sf(data = effort_species, aes(fill = species_effort), color = "black", alpha = 0.9) +
+  scale_fill_viridis_c() +
+  theme_minimal() +
+  labs(fill = "Species Count (Effort)")
+
+#
+effort_combined <- left_join(density_data, st_drop_geometry(effort_species), by = "ID") %>%
+  mutate(efficiency = point_count / species_effort)
+
+bbox <- st_bbox(density_data)  # or use effort_combined for tighter bounds
+pad <- 1000
+
+ggplot() +
+  geom_sf(data = bcraw, fill = "gray90", color = "white") +
+  geom_sf(data = effort_species, aes(fill = species_effort), color = "black", alpha = 0.2) +
+  scale_fill_viridis_c() +
+  coord_sf(
+    xlim = c(bbox["xmin"] - pad, bbox["xmax"] + pad),
+    ylim = c(bbox["ymin"] - pad, bbox["ymax"] + pad)
+  ) +
+  theme_minimal() +
+  labs(fill = "Species Count (Effort)")
+
+
+ggplot() +
+  geom_sf(data = bcraw, fill = "gray90", color = "white") +
+  geom_sf(data = effort_combined, aes(fill = efficiency), color = "black", alpha = 0.3) +
+  scale_fill_viridis_c() +
+  coord_sf(
+    xlim = c(bbox["xmin"] - pad, bbox["xmax"] + pad),
+    ylim = c(bbox["ymin"] - pad, bbox["ymax"] + pad)
+  ) +
+  theme_minimal() +
+  labs(fill = "Density per Species Effort")
+
