@@ -128,7 +128,7 @@ undetected <- c()
 levels_all <- c(k$level,d$level)
 levels_sort <- sort(unique(unique(levels_all)))
 
-for( i in 1:length(level_sort) ){
+for( i in 1:length(levels_sort) ){
   confirmed[i]  = sum(dcompare$species[dcompare$level == levels_sort[i]] %in% kcompare$species[kcompare$level == levels_sort[i]])
   new_report[i] = sum(!(dcompare$species[dcompare$level == levels_sort[i]] %in% kcompare$species[kcompare$level == levels_sort[i]]))
   undetected[i] = sum(!(kcompare$species[kcompare$level == levels_sort[i]] %in% dcompare$species[dcompare$level == levels_sort[i]]))

@@ -1,10 +1,10 @@
-#Interactivity for Desity per Species Effort
 ####
-library(shiny)
+# library(shiny)
+library(plotly)
 library(sf)
 library(dplyr)
-library(ggplot2)
-library(viridis)
+# library(ggplot2)
+# library(viridis)
 
 # Assuming these are already loaded:
 # - grid_sf: your spatial grid
