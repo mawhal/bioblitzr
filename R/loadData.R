@@ -73,7 +73,7 @@ k <- read_csv("test_data_raw/Koz_list.csv")
 # select and name columns
 d <- d %>% 
   dplyr::select( taxon = `scientificName (morphospecies)`, id = `eventID (station #)`,
-          phylum = Phylum, genus = Genus) %>% 
+          Phylum, Genus) %>% 
   filter( !is.na(taxon) ) %>% # remove specimens without a name
   filter( taxon != "LOST LABELS" ) # remove specimens without metadata
 d$firstname <-  gsub("([A-Za-z]+).*", "\\1", d$taxon )
@@ -96,15 +96,14 @@ m <- m %>%
   summarize( latitude = mean(latitude), longitude = mean(longitude) )
 dmerge <- left_join(d, m)
 # dmerge <- dmerge[!is.na(dmerge$latitude),] # remove a few occurrences without geolocations
-
-allnames=unique(c(d$firstname, k$firstname)) 
+allnames <- unique(c(d$firstname, k$firstname))
+allnames <- allnames[ !is.na(allnames)]
+allnames <- data.frame( taxon = allnames )
 
 # taxize package
-#classifications=taxize::classification(allnames, db = "worms")
-#write this to disc 
-classifications=do.call(rbind,classifications)
-write_csv(classifications,"test_data/classifications.csv")
-
+# source("R/higher_rank.R")
+# ranks <- higher_rank(allnames, taxon)
+write_csv(ranks, "test_data_clean/ranks.csv")
 
 # add taxonomy
 # tax <- read_csv("test_data_raw/classifications.csv")
