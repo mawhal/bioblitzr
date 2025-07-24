@@ -5,7 +5,7 @@
 
 
 # single file approach - simplest approach
-# taxon, taxonomy columns (lowercase), latitude, longitude (decimal degrees)
+# taxon, taxonomy columns (uppercase to avoid confusion with function like class() and order()), latitude, longitude (decimal degrees)
 
 # comparison data should have the same format as the main bioblitz data if possible
 
@@ -56,3 +56,62 @@ compareBlitz() <-  function( data = data, latitude = "latitude", longitude = "lo
 # Comparison data loading
 #   requires column name "taxon" to link with 
 #   should include taxonomy
+
+
+
+# The remainder of this script is used to prepare datasets to use in testing package functions
+library(tidyverse)
+
+### Calvert Island BioBlitz Data
+# files
+# bioblitz specimens (occurrences/observations/samples)
+d <- read_csv("test_data_raw/MarineGEOBC_bioblitz_specimen_20180403.csv")
+# geolocations
+m <- read_csv("test_data_raw/MarineGEOBC_bioblitz_station_20180403.csv")
+# dataset for comparison (digitized species list for NE Pacific coast invertebrates)
+k <- read_csv("test_data_raw/Koz_list.csv") 
+# select and name columns
+d <- d %>% 
+  dplyr::select( taxon = `scientificName (morphospecies)`, id = `eventID (station #)`,
+          phylum = Phylum, genus = Genus) %>% 
+  filter( !is.na(taxon) ) %>% # remove specimens without a name
+  filter( taxon != "LOST LABELS" ) # remove specimens without metadata
+d$firstname <-  gsub("([A-Za-z]+).*", "\\1", d$taxon )
+
+m <- m %>% 
+  dplyr::select( id = eventID, latitude = decimalLatitude, longitude = decimalLongitude)
+k <- k %>% 
+  dplyr::select( taxon = ScientificName_accepted, Phylum, Class, Order, Family, Genus, Species )
+k$firstname <-  gsub("([A-Za-z]+).*", "\\1", k$taxon )
+
+# Remove suffixes and duplicate station IDs
+m$id <- substr(m$id,1,6)
+d$id <- substr(d$id,1,6)
+m <- distinct(m)
+
+# Merge station coordinates with species data
+# for this dataset, resolution of geolocations of sub ids (e.g., IHAK42a) makes merging difficult
+m <- m %>% 
+  group_by(id) %>% 
+  summarize( latitude = mean(latitude), longitude = mean(longitude) )
+dmerge <- left_join(d, m)
+# dmerge <- dmerge[!is.na(dmerge$latitude),] # remove a few occurrences without geolocations
+
+allnames=unique(c(d$firstname, k$firstname)) 
+
+# taxize package
+#classifications=taxize::classification(allnames, db = "worms")
+#write this to disc 
+classifications=do.call(rbind,classifications)
+write_csv(classifications,"test_data/classifications.csv")
+
+
+# add taxonomy
+# tax <- read_csv("test_data_raw/classifications.csv")
+
+# write test data to file
+write_csv(dmerge, "test_data_clean/hakai17.csv")
+write_csv(k, "test_data_clean/kozclean.csv")
+
+  
+####
