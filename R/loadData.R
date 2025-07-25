@@ -11,12 +11,7 @@
 
 
 
-# start of function to replace stacked_barplot (function will do more than stacked bar plots)
-compareBlitz() <-  function( data = data, latitude = "latitude", longitude = "longitude", 
-                             taxonomy_cols = c("kingdom", "phylum", "class", "order", "family", "genus", "species"),
-                             data_compare = data_compare){
-  
-}
+
 
 # other options and requirements to consider
 # Things that must be included
@@ -96,17 +91,21 @@ m <- m %>%
   summarize( latitude = mean(latitude), longitude = mean(longitude) )
 dmerge <- left_join(d, m)
 # dmerge <- dmerge[!is.na(dmerge$latitude),] # remove a few occurrences without geolocations
-allnames <- unique(c(d$firstname, k$firstname))
-allnames <- allnames[ !is.na(allnames)]
-allnames <- data.frame( taxon = allnames )
 
-# taxize package
+
+
+
+## use taxadb to grab taxonomic ranks 
+# allnames <- unique(c(d$firstname, k$firstname))
+# allnames <- allnames[ !is.na(allnames)]
+# allnames <- data.frame( taxon = allnames )
 # source("R/higher_rank.R")
 # ranks <- higher_rank(allnames, taxon)
-write_csv(ranks, "test_data_clean/ranks.csv")
+# write_csv(ranks, "test_data_clean/ranks.csv")
 
-# add taxonomy
-# tax <- read_csv("test_data_raw/classifications.csv")
+# read taxonomic ranks file
+ranks <- read_csv("test_data_clean/ranks.csv")
+dmerge <- left_join(dmerge, ranks)
 
 # write test data to file
 write_csv(dmerge, "test_data_clean/hakai17.csv")
