@@ -3,103 +3,57 @@ repository for an R package to facilitate visualization and analysis of BioBlitz
 
 06/11/2025 config
 
+# BioDataCompareR: A general-purpose R package for comparing two biodiversity datasets
 
-How to install this package:
+# This is a basic structure for setting up and using your R package
 
+# How to install the development version (if using GitHub):
+# install.packages("devtools")
+# devtools::install_github("yourusername/BioDataCompareR")
 
-What this package can do for you:
-
-
-Specific functions to use:
-
-
-# ---------------------------------------------
-# 🔧 Installation Instructions
-# ---------------------------------------------
-
-# 1. Clone this GitHub repository:
-# (replace YOUR-REPOSITORY-NAME with the actual repo name)
-# Run this in your terminal (not R):
-# git clone https://github.com/YOUR-REPOSITORY-NAME.git
-
-# 2. Set working directory in R to the cloned folder:
-setwd("PATH/TO/CLONED/FOLDER")
-
-# 3. Install required dependencies:
-install.packages(c("tidyverse", "VennDiagram", "lubridate", "ggplot2", "taxize", "devtools"))
-
-# 4. Install the package from the local source:
-devtools::install()
-
-# 5. Load the package:
-library(bioblitzr)
-
-# ---------------------------------------------
-# 📌 What This Package Can Do
-# ---------------------------------------------
-# - Clean and standardize scientific names using `taxize`
-# - Compare overlapping species between datasets
-# - Create Venn diagrams of shared vs unique species
-# - Summarize and visualize taxonomic data by Phylum
-# - Generate exportable plots like stacked bar charts
-
-# ---------------------------------------------
-# 📁 Data Requirements
-# ---------------------------------------------
-# Two .csv files with:
-# - A shared taxonomic column (e.g., scientific name)
-# - Optionally: phylum, genus, collection dates
-
-# ---------------------------------------------
-# 🔍 Example Dependencies and Usage
-# ---------------------------------------------
-
-# Load packages used in plotting and taxonomic cleaning
+# Load necessary packages
 library(tidyverse)
 library(VennDiagram)
 library(ggplot2)
-library(taxize)
 
-# ---------------------------------------------
-# 🔧 Package Functions
-# ---------------------------------------------
+# Load your data (example with a sample .rds file)
+bcraw <- readRDS("bcraw.rds")
 
-# 1. clean_names(df)
-# Extracts the first word from collector name into `firstname`
-# Input: dataframe with a collector name column
-# Output: same dataframe with a new 'firstname' column
+# Example function to summarize species counts
+summarize_species <- function(data, id_column = "phylum") {
+  data %>%
+    group_by(.data[[id_column]]) %>%
+    summarise(count = n()) %>%
+    arrange(desc(count))
+}
 
-# 2. filter_na_taxa(df)
-# Removes rows with missing taxonomic data (e.g., Phylum)
-# Input: dataframe
-# Output: cleaned dataframe
+# Example function to generate a Venn diagram comparing two datasets
+compare_taxa <- function(data1, data2, col = "phylum") {
+  taxa1 <- unique(data1[[col]])
+  taxa2 <- unique(data2[[col]])
+  
+  venn.plot <- draw.pairwise.venn(
+    area1 = length(taxa1),
+    area2 = length(taxa2),
+    cross.area = length(intersect(taxa1, taxa2)),
+    category = c("Dataset 1", "Dataset 2"),
+    fill = c("skyblue", "pink"),
+    lty = "blank"
+  )
+  
+  grid.draw(venn.plot)
+}
 
-# 3. summarize_by_phylum(df)
-# Summarizes record counts by phylum
-# Input: dataframe with 'Phylum' column
-# Output: summary dataframe
+# If you don’t have historical data:
+# Create a dummy dataset with relevant structure
+generate_dummy_data <- function(n = 50, categories = c("phylum", "class")) {
+  tibble(
+    phylum = sample(c("Chordata", "Arthropoda", "Mollusca", "Annelida"), n, replace = TRUE),
+    class = sample(c("Mammalia", "Insecta", "Gastropoda", "Polychaeta"), n, replace = TRUE)
+  )
+}
 
-# 4. plot_phylum_barplot(df)
-# Creates stacked barplot of species counts per phylum
-# Input: dataframe with 'Phylum' and 'dataset' columns
-# Output: ggplot2 object
-
-# 5. get_taxonomic_classification(name)
-# Uses taxize to retrieve full taxonomic classification
-# Input: scientific name (string)
-# Output: classification dataframe or list
-
-# 6. compare_species_lists(df1, df2)
-# Identifies shared and unique species
-# Input: two dataframes with scientific names
-# Output: list with shared, unique_df1, unique_df2
-
-# 7. generate_venn(shared, unique_df1, unique_df2)
-# Draws a Venn diagram comparing species lists
-# Input: vectors of species
-# Output: Venn diagram plot
-
-# 8. read_and_prepare(file_path)
-# Reads a CSV and performs basic cleaning
-# Input: file path
-# Output: ready-to-analyze dataframe
+# Troubleshooting tips:
+# - Make sure your .rds files are in the correct path
+# - Ensure required columns like 'phylum' exist
+# - Use `str(data)` to inspect the structure of your datasets
