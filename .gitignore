@@ -53,3 +53,9 @@ rsconnect/
 
 # ignore macOS files
 **/.DS_Store
+
+# ignore swp files
+*.swp
+
+# ignore some files generated during merge
+*_3439.R
