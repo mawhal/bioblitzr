@@ -11,7 +11,7 @@ d = read_csv("test_data/MarineGEOBC_bioblitz_specimen_20180403.csv")
 k = read_csv("test_data/Koz_list.csv")
 
 
-#access to columns 
+#access to columns x
 d
 d$firstname=gsub("([A-Za-z]+).*", "\\1", d$`scientificName (morphospecies)`)
 class(d) 
